@@ -70,3 +70,34 @@ Simulate a real-world scenario where you're asked to create or modify a user acc
 ![](../images/access-success.png)
 
 ---
+
+### ✅ Step 7: Resolution Summary – Document & Close Ticket
+
+**Summary:**  
+Granted access to `\\marketing-shared\assets` for user `s.connor` by adding them to the **Marketing** group and ensuring proper permissions on the folder.
+
+---
+
+### Tools Used
+
+- `lusrmgr.msc`  
+- File Explorer  
+- Folder Security tab
+
+---
+
+### Follow-Up Tasks
+
+- [ ] Email user to confirm access  
+- [ ] Recommend user change temporary password on first login  
+- [ ] Mark ticket as resolved in the helpdesk system
+
+---
+
+### Attachments
+
+- `images/request-verification.png`  
+- `images/user-created-confirmation.png`  
+- `images/user-group-membership.png`  
+- `images/folder-permissions-assigned.png`  
+- `images/access-success.png`
