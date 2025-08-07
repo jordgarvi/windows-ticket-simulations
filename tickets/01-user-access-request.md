@@ -56,3 +56,17 @@ Simulate a real-world scenario where you're asked to create or modify a user acc
 
 📸 **Screenshot of permissions panel with group added:**  
 ![](../images/folder-permissions-assigned.png)
+
+---
+
+### Step 6: Test Access (Optional)
+
+- Used **Run as different user** to simulate logging in as `s.connor`.
+- Navigated to: `C:\Shared\Marketing\assets`.
+- Created a test file: `access_test.txt`.
+- Verified the file could be saved and opened.
+
+📸 **Screenshot:**  
+![](../images/access-success.png)
+
+---
