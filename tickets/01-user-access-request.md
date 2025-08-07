@@ -45,3 +45,14 @@ Simulate a real-world scenario where you're asked to create or modify a user acc
 
 ---
 
+### Step 5: Check Folder Permissions
+
+- Created a mock folder: `C:\Shared\Marketing\assets`
+- Right-clicked the **assets** folder > **Properties > Security** tab
+- Clicked **Edit… > Add…**
+- Entered `Marketing` group and verified with **Check Names**
+- Granted **Modify** (includes Read & Write) permissions
+- Clicked **Apply** and **OK** to confirm
+
+📸 **Screenshot of permissions panel with group added:**  
+![](../images/folder-permissions-assigned.png)
