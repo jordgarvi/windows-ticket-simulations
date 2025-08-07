@@ -24,11 +24,11 @@ Simulate a real-world scenario where you're asked to create or modify a user acc
 - Proceeded to create the user manually using **New User…** with a placeholder password and default options.
 
 📸 **Screenshot after creating user `s.connor`:**  
-![](../images/user-check.png)
+![](../images/user-created-confirmation.png)
 
 ---
 
-### Step 4: Add User to Correct Group
+### Step 3: Add User to Correct Group
 
 - Opened **lusrmgr.msc**
 - Navigated to **Groups**
@@ -45,7 +45,7 @@ Simulate a real-world scenario where you're asked to create or modify a user acc
 
 ---
 
-### Step 5: Check Folder Permissions
+### Step 4: Check Folder Permissions
 
 - Created a mock folder: `C:\Shared\Marketing\assets`
 - Right-clicked the **assets** folder > **Properties > Security** tab
@@ -59,7 +59,7 @@ Simulate a real-world scenario where you're asked to create or modify a user acc
 
 ---
 
-### Step 6: Test Access 
+### Step 5: Test Access 
 
 - Used **Run as different user** to simulate logging in as `s.connor`.
 - Navigated to: `C:\Shared\Marketing\assets`.
@@ -71,7 +71,7 @@ Simulate a real-world scenario where you're asked to create or modify a user acc
 
 ---
 
-### ✅ Step 7: Resolution Summary – Document & Close Ticket
+### ✅ Step 6: Resolution Summary – Document & Close Ticket
 
 **Summary:**  
 Granted access to `\\marketing-shared\assets` for user `s.connor` by adding them to the **Marketing** group and ensuring proper permissions on the folder.
