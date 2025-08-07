@@ -74,15 +74,20 @@ Simulate a real-world scenario where you're asked to create or modify a user acc
 ### ✅ Step 6: Resolution Summary – Document & Close Ticket
 
 **Summary:**  
-Granted access to `\\marketing-shared\assets` for user `s.connor` by adding them to the **Marketing** group and ensuring proper permissions on the folder.
+Granted access to the network share `\\marketing-shared\assets` for user `s.connor` by:
+- Creating a new local user account
+- Adding them to the **Marketing** group
+- Assigning the group the necessary folder-level Modify permissions
+- Confirming access with a test login and file creation
+
 
 ---
 
 ### Tools Used
 
 - `lusrmgr.msc`  
-- File Explorer  
-- Folder Security tab
+- `File Explorer`  
+- `Folder Security tab`
 
 ---
 
@@ -96,8 +101,9 @@ Granted access to `\\marketing-shared\assets` for user `s.connor` by adding them
 
 ### Attachments
 
-- `images/request-verification.png`  
-- `images/user-created-confirmation.png`  
-- `images/user-group-membership.png`  
-- `images/folder-permissions-assigned.png`  
-- `images/access-success.png`
+- [request-verification.png](../images/request-verification.png)  
+- [user-created-confirmation.png](../images/user-created-confirmation.png)  
+- [user-group-membership.png](../images/user-group-membership.png)  
+- [folder-permissions-assigned.png](../images/folder-permissions-assigned.png)  
+- [access-success.png](../images/access-success.png)
+
