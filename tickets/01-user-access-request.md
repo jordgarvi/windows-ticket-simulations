@@ -28,3 +28,20 @@ Simulate a real-world scenario where you're asked to create or modify a user acc
 
 ---
 
+### Step 4: Add User to Correct Group
+
+- Opened **lusrmgr.msc**
+- Navigated to **Groups**
+- Checked if the **Marketing** group exists
+- If not present, created it via **Action > New Group...**
+  - **Group name:** Marketing
+  - **Description:** Departmental access group for Marketing users
+- Double-clicked the **Marketing** group
+- Clicked **Add…**, entered `s.connor`, and confirmed
+- Verified `s.connor` is now listed as a member
+
+📸 **Screenshot of group membership confirmation:**  
+![](../images/user-group-membership.png)
+
+---
+
