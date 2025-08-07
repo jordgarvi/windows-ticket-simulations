@@ -99,6 +99,16 @@ Granted access to the network share `\\marketing-shared\assets` for user `s.conn
 
 ---
 
+### Notes & Reflections
+
+Before starting this ticket, I created a detailed step-by-step plan to keep the workflow organised and ensure all required actions were covered clearly in the markdown. This approach helped me maintain focus and structure throughout the process.
+
+During the exercise, I had to reinstall my Windows VM with the Enterprise edition to access `lusrmgr.msc`, which is necessary for managing local users and groups. This highlighted the importance of verifying the environment setup before beginning practical tasks.
+
+Overall, simulating the entire user access request from verification through permission assignment was a valuable hands-on experience that reinforced both technical skills and documentation practices.
+
+---
+
 ### Attachments
 
 - [request-verification.png](../images/request-verification.png)  
