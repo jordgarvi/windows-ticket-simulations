@@ -59,7 +59,7 @@ Simulate a real-world scenario where you're asked to create or modify a user acc
 
 ---
 
-### Step 6: Test Access (Optional)
+### Step 6: Test Access 
 
 - Used **Run as different user** to simulate logging in as `s.connor`.
 - Navigated to: `C:\Shared\Marketing\assets`.
