@@ -1,0 +1,12 @@
+From: hr@company.com  
+Subject: New User Request – John Doe  
+
+Please create a new domain user account for the following employee: 
+ 
+Name: John Doe  
+Department: Marketing  
+Username: jdoe  
+Role: Standard User  
+Start Date: 12 August 2025  
+Requestor: Jane Smith (HR)  
+Contact: 555-123-4567  
