@@ -100,3 +100,51 @@ This section outlines user-facing fixes that do not require admin privileges or 
 - ![Account removal screen in the Mail app](../images/08-remove-account.png)  
 - ![Add account screen in the Mail app](../images/09-add-account.png)  
 - ![Confirmation of successful email sync](../images/10-sync-success.png)  
+
+---
+
+## Tier 2 Troubleshooting: Account-Level Checks and Alternative Access
+
+This section explores backend and account-level verification steps, as well as alternative access methods, to address Outlook sync issues when local app troubleshooting is limited by UI or policy restrictions.
+
+---
+
+### Step 1: Verify Account Security and Sync Status via Microsoft Account Portal
+
+Attempted to access https://account.microsoft.com/security within the Windows 11 VM to review security alerts and recent activity.
+
+Encountered the error:
+
+> "Sorry, something went wrong."  
+> TraceID: e8qgw/mswu+wbuGQ.26.58
+
+After troubleshooting, the issue appears related to browser compatibility or security restrictions within the virtual machine environment.
+
+As a workaround, the Microsoft Account portal was accessed from the host machine’s browser, bypassing VM limitations, to review security settings and recent activity.
+
+---
+
+### Screenshots
+
+- ![Microsoft Account Portal Access Error in VM](../images/account-portal-error-vm.png)
+- ![Microsoft Account Portal Access via Host](../images/account-portal-host.png)
+- ![Outlook Web Access Inbox](../images/owa-inbox.png)
+
+---
+
+### Step 2: Use Outlook Web Access (OWA) as an Alternative
+
+If local Outlook app issues persist or mailbox settings remain inaccessible, recommend users access their email through [Outlook Web Access](https://outlook.office.com).
+
+This web-based interface provides full mailbox functionality without requiring local app configuration.
+
+---
+
+**Note:** Using the host system’s browser to access OWA or the Microsoft Account portal can circumvent VM-related restrictions and ensure uninterrupted access to email and security settings.
+
+---
+
+### Summary
+
+These Tier 2 troubleshooting measures help maintain email access and security monitoring when direct modification of Outlook settings is blocked by modern UI limitations or device policies. Escalation or further backend access may be required for deeper configuration changes.
+
