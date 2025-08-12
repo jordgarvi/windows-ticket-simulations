@@ -4,6 +4,8 @@
 
 The original goal was to simulate and troubleshoot a common Outlook synchronization issue preventing emails from sending or receiving correctly. The aim was to reproduce the problem, walk through diagnostic steps, and restore normal mail flow.
 
+Email sync problems can cause critical communication delays impacting business or personal productivity.
+
 During testing, limitations were encountered due to Microsoft’s updated account settings interface, which restricts direct access to mailbox configuration options without removing and re-adding the account. This prevented fully reproducing the original scenario without risking disruption to live email service.
 
 As a result, this ticket has been adapted to focus on:  
@@ -15,7 +17,7 @@ As a result, this ticket has been adapted to focus on:
 
 ## Possible Causes
 
-- **Restricted UI access in current Outlook versions** (recently identified limitation)  
+- **Restricted UI access in current Outlook versions** (recent Microsoft UI changes restricting mailbox sync access)  
 - Incorrect login credentials or expired password  
 - Server outage or maintenance on Microsoft 365 / Exchange server  
 - Corrupted offline Outlook cache (`.OST` file)  
@@ -50,7 +52,7 @@ Modern Microsoft Mail/Outlook apps on Windows 10/11 no longer provide access to 
 
 ---
 
-### Screenshots
+### Screenshots (located in `../images/`)
 
 - ![Outlook app UI showing no File tab](../images/01-no-file-tab.png)  
 - ![Windows Settings account management page with limited options](../images/02-limited-account-options.png)  
@@ -91,7 +93,7 @@ This section outlines user-facing fixes that do not require admin privileges or 
 
 ---
 
-### Supporting Screenshots
+### Supporting Screenshots (located in `../images/`)
 
 - ![Internet check: browser open on working webpage](../images/04-internet-check.png)  
 - ![Microsoft 365 Service Health page showing no issues](../images/05-m365-status.png)  
@@ -124,7 +126,7 @@ As a workaround, the Microsoft Account portal was accessed from the host machine
 
 ---
 
-### Screenshots
+### Screenshots (located in `../images/`)
 
 - ![Microsoft Account Portal Access Error in VM](../images/account-portal-error-vm.png)
 - ![Microsoft Account Portal Access via Host](../images/account-portal-host.png)
@@ -154,21 +156,40 @@ These Tier 2 troubleshooting measures help maintain email access and security mo
 
 ### When to Escalate
 
-- If Tier 1 troubleshooting steps fail to restore email sync or functionality.
-- If issues require changes only accessible in Microsoft 365 Admin Center or backend tools.
-- When suspicious account activity or security blocks are suspected.
-- If policies or device management restrict local client configuration beyond Tier 1 capability.
+- If Tier 1 troubleshooting steps fail to restore email sync or functionality.  
+- If issues require changes only accessible in Microsoft 365 Admin Center or backend tools.  
+- When suspicious account activity or security blocks are suspected.  
+- If policies or device management restrict local client configuration beyond Tier 1 capability.  
 - When Microsoft Support intervention is necessary.
 
 ### Documenting UI and Access Limitations
 
-- Note any missing options or inaccessible settings encountered during troubleshooting (e.g., no File tab, missing sync settings).
-- Capture and include any error messages seen (e.g., Microsoft Account portal error in VM).
-- Record any alternative access methods used (e.g., Outlook Web Access) and their effectiveness.
-- Emphasize that modern Microsoft Outlook apps impose restrictions that limit Tier 1 troubleshooting scope.
-- Reference official Microsoft documentation or support articles regarding these limitations if available.
+- Note any missing options or inaccessible settings encountered during troubleshooting (e.g., no File tab, missing sync settings).  
+- Capture and include any error messages seen (e.g., Microsoft Account portal error in VM).  
+- Record any alternative access methods used (e.g., Outlook Web Access) and their effectiveness.  
+- Emphasize that modern Microsoft Outlook apps impose restrictions that limit Tier 1 troubleshooting scope.  
+- Reference official Microsoft documentation or support articles regarding these limitations if available.  
 - Suggest this documentation be maintained in shared knowledge bases to assist future Tier 1 support staff.
 
 ---
 
+## 5. Repo Deliverables
 
+This repository includes the following materials to support learning and practical troubleshooting:
+
+- **Markdown Ticket:**  
+  A detailed, step-by-step troubleshooting guide with annotated screenshots documenting the entire diagnostic process.
+
+- **Screenshots:**  
+  Images illustrating key findings such as the absence of the File menu and missing mailbox sync settings in modern Outlook apps.
+
+- **Flowchart:**  
+  A decision tree diagram outlining Tier 1 versus Tier 2 troubleshooting paths for email sync issues.
+
+- **Test Account Setup Guide:**  
+  Instructions for creating and configuring a test Microsoft Outlook account to safely replicate troubleshooting scenarios without risking real email data.
+
+- **Notes on Microsoft UI Changes:**  
+  An explanation of recent UI and policy changes in Microsoft Outlook and Windows Mail apps, and the implications for support workflows.
+
+---
