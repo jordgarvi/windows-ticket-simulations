@@ -25,3 +25,39 @@ As a result, this ticket has been adapted to focus on:
 - **Restricted UI access in current Outlook versions** (newly added cause)
 
 ---
+
+## 1. Problem Simulation
+
+In this step, I simulate a common problem faced by Tier 1 support staff:
+
+Modern Microsoft Mail/Outlook apps on Windows 10/11 no longer provide access to mailbox sync settings or advanced account management options, which limits the ability to troubleshoot sync issues directly in the client.
+
+---
+
+### What I Did
+
+- Used a free test Microsoft Outlook.com account in the Windows 11 Mail app.
+- Observed that there is **no File tab** in the app UI.
+- Checked **Windows Settings → Email & accounts → selected the account → Manage**.
+- Found only limited options:  
+  - Account description  
+  - Buy Microsoft 365 subscription  
+  - Import settings  
+  - Remove account  
+- Noticed **no option to change mailbox sync settings or server details**.
+
+---
+
+### Screenshots
+
+- ![Outlook app UI showing no File tab](./images/01-no-file-tab.png)
+- ![Windows Settings account management page with limited options](./images/02-limited-account-options.png)
+- ![Manage account page inside the app with minimal options](./images/03-manage-account-minimal.png)
+- ![Manage account page inside the app with minimal options](./images/03-manage-account-minimal-2.png)
+
+
+---
+
+### What This Means
+
+This UI limitation means Tier 1 support cannot fix sync issues by editing server or sync settings in the app or Windows settings. This requires alternative troubleshooting approaches or escalation.
