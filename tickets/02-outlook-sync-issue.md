@@ -50,10 +50,10 @@ Modern Microsoft Mail/Outlook apps on Windows 10/11 no longer provide access to 
 
 ### Screenshots
 
-- ![Outlook app UI showing no File tab](./images/01-no-file-tab.png)
-- ![Windows Settings account management page with limited options](./images/02-limited-account-options.png)
-- ![Manage account page inside the app with minimal options](./images/03-manage-account-minimal.png)
-- ![Manage account page inside the app with minimal options](./images/03-manage-account-minimal-2.png)
+- ![Outlook app UI showing no File tab](../images/01-no-file-tab.png)
+- ![Windows Settings account management page with limited options](../images/02-limited-account-options.png)
+- ![Manage account page inside the app with minimal options](../images/03-manage-account-minimal.png)
+- ![Manage account page inside the app with minimal options](../images/03-manage-account-minimal-2.png)
 
 
 ---
