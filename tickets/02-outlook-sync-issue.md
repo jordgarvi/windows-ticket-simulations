@@ -148,3 +148,27 @@ This web-based interface provides full mailbox functionality without requiring l
 
 These Tier 2 troubleshooting measures help maintain email access and security monitoring when direct modification of Outlook settings is blocked by modern UI limitations or device policies. Escalation or further backend access may be required for deeper configuration changes.
 
+---
+
+## 4. Escalation and Documentation
+
+### When to Escalate
+
+- If Tier 1 troubleshooting steps fail to restore email sync or functionality.
+- If issues require changes only accessible in Microsoft 365 Admin Center or backend tools.
+- When suspicious account activity or security blocks are suspected.
+- If policies or device management restrict local client configuration beyond Tier 1 capability.
+- When Microsoft Support intervention is necessary.
+
+### Documenting UI and Access Limitations
+
+- Note any missing options or inaccessible settings encountered during troubleshooting (e.g., no File tab, missing sync settings).
+- Capture and include any error messages seen (e.g., Microsoft Account portal error in VM).
+- Record any alternative access methods used (e.g., Outlook Web Access) and their effectiveness.
+- Emphasize that modern Microsoft Outlook apps impose restrictions that limit Tier 1 troubleshooting scope.
+- Reference official Microsoft documentation or support articles regarding these limitations if available.
+- Suggest this documentation be maintained in shared knowledge bases to assist future Tier 1 support staff.
+
+---
+
+
