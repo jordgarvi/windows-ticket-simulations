@@ -17,11 +17,11 @@ Before beginning, several pre-checks were performed to ensure a smooth setup and
 
 ## Pre-Check Screenshots
 
-- ![VM Network Adapter set to Bridged](../images/vm-network-adapter.png)  
-- ![Windows Firewall temporarily allowing VPN traffic](../images/firewall-vpn-rule.png)  
-- ![Certificates and keys in PKI issued and private folders](../images/pki-issued-and-private-folders.png)  
-- ![Certificates and keys overview](../images/openvpn-certificates-and-keys.png)  
-- ![Verified exported OpenVPN configuration file](../images/openvpn-config-checked.png)
+- ![VM Network Adapter set to Bridged](../images/vm-network-adapter.png) – Shows the VM network adapter configured in Bridged mode, confirming the VM is on the same LAN as the host.  
+- ![Windows Firewall temporarily allowing VPN traffic](../images/firewall-vpn-rule.png) – Demonstrates the temporary rule allowing OpenVPN traffic for testing purposes.  
+- ![PKI folders with issued certificates and private keys](../images/pki-issued-and-private-folders.png) – Displays the `pki/issued` and `pki/private` folders containing server and client certificates/keys.  
+- ![Overview of server and client certificates](../images/openvpn-certificates-and-keys.png) – Provides a visual confirmation that certificates and keys have been successfully generated.  
+- ![Client configuration file and certificates](../images/openvpn-config-checked.png) – Shows the `.ovpn` client configuration alongside the required certificates for import into OpenVPN.  
 
 ---
 
