@@ -28,3 +28,87 @@ Before beginning, several pre-checks were performed to ensure a smooth setup and
 ## Next Steps
 
 With the environment verified and pre-checks completed, the next step is installing OpenVPN on the Windows 11 VM and importing the configuration file for testing.
+
+---
+
+# Stage 2: Set Up a VPN Server in Your Lab
+
+This step documents the setup of an OpenVPN server in the lab environment, including certificate configuration, client setup, and verification.
+
+---
+
+## 1. Download and Install OpenVPN
+
+Downloaded the OpenVPN installer from the official site:
+
+![OpenVPN Download Page](../images/openvpn.download-page.png)
+
+Installed OpenVPN to the default location (`C:\Program Files\OpenVPN`).
+
+---
+
+## 2. Download and Prepare EasyRSA
+
+Downloaded EasyRSA (64-bit Windows version) for certificate management:
+
+![EasyRSA Download Page](../images/esayrsawin64zip.downloadpage.png)
+
+Extracted EasyRSA and prepared it for generating server and client certificates.
+
+---
+
+## 3. OpenVPN Config Folder
+
+Moved the server and client `.ovpn` configuration files into the appropriate directories.
+
+### Global Config Location
+
+![Program Files OpenVPN Config Screenshot](../images/ProgramFiles.OpenVPN.config.-screenshot)
+
+### User Config Location
+
+![Users Jordan OpenVPN Config Screenshot](../images/Users.Jordan.OpenVPN.config.png)
+
+---
+
+## 4. Edit Configuration Files
+
+### Client Configuration
+
+Opened `client.ovpn` in Notepad to verify paths and settings:
+
+![Notepad Open With client.ovpn](../images/Notepad-open-with-client.ovpn.png)
+
+### Server Configuration
+
+Opened `server.ovpn` in Notepad to verify paths, keys, and certificates:
+
+![Notepad Open With server.ovpn](../images/Notepad-open-with-server.ovpn.png)
+
+---
+
+## 5. Start the OpenVPN Server
+
+Started the OpenVPN GUI as administrator and connected the server instance:
+
+![Server Now Connected Sign](../images/server-now-connected-sign.png)
+
+---
+
+## 6. Verify VPN IP
+
+Used `ipconfig` to check the VPN IP assigned to the TAP adapter:
+
+![IPConfig Showing VPN IP (10.8.0.x)](../images/ipconfig-showing-VPNIP-(10.8.0.x).png)
+
+- The server’s VPN IP: `10.8.0.1`
+- Confirms the VPN is active and ready for client connections.
+
+---
+
+### Notes
+
+- All certificate files (`server.crt`, `server.key`, `ca.crt`, `dh.pem`) must be present in `C:\Program Files\OpenVPN\config`.
+- Ensure the OpenVPN GUI is run as administrator to allow server connections.
+- Client machines should use the exported `client.ovpn` for testing connectivity.
+
