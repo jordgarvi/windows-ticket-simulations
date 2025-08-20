@@ -63,7 +63,7 @@ Moved the server and client `.ovpn` configuration files into the appropriate dir
 
 ### Global Config Location
 
-![Program Files OpenVPN Config Screenshot](../images/ProgramFiles.OpenVPN.config.-screenshot)
+![Program Files OpenVPN Config Screenshot](../images/ProgramFiles.OpenVPN.config.-screenshot.png)
 
 ### User Config Location
 
