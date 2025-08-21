@@ -13,12 +13,35 @@ Before beginning, several validation steps were performed:
 - Prepared PKI with server and client certificates.  
 - Confirmed `.ovpn` client configuration file was available for later testing.  
 
-**Screenshots:**  
-- ![VM Network Adapter set to Bridged](../images/vm-network-adapter.png)  
-- ![Windows Firewall VPN Rule](../images/firewall-vpn-rule.png)  
-- ![PKI folders with certificates](../images/pki-issued-and-private-folders.png)  
-- ![Server/Client Certificates](../images/openvpn-certificates-and-keys.png)  
-- ![Client Configuration File](../images/openvpn-config-checked.png)  
+## Pre-Check Screenshots
+
+### VM Network Adapter – Bridged Mode
+![VM Network Adapter set to Bridged](../images/vm-network-adapter.png)  
+*Confirms the VM is pulling an IP from the same subnet as the host machine.*
+
+---
+
+### Windows Firewall Rule
+![Windows Firewall VPN Rule](../images/firewall-vpn-rule.png)  
+*Shows that a temporary firewall rule was added to allow OpenVPN traffic.*
+
+---
+
+### PKI Folders with Certificates
+![PKI folders with certificates](../images/pki-issued-and-private-folders.png)  
+*Displays `pki/issued` and `pki/private` directories containing generated certificates and keys.*
+
+---
+
+### Server and Client Certificates
+![Server/Client Certificates](../images/openvpn-certificates-and-keys.png)  
+*Overview of server and client certificates to be used in the VPN setup.*
+
+---
+
+### Client Configuration File
+![Client Configuration File](../images/openvpn-config-checked.png)  
+*Verification that the `.ovpn` client configuration file and certificate references are present.*
 
 ---
 
