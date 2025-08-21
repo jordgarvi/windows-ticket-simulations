@@ -32,5 +32,3 @@ Thank you,
 
 Sarah Connor
 
-
-
