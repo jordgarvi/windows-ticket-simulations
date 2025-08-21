@@ -1,114 +1,75 @@
 # Ticket 03 – VPN Setup Simulation
 
 ## Objective
+Simulate a real-world scenario where IT sets up a VPN server to enable secure remote access for lab users. The purpose is to provision a working OpenVPN environment so future user requests for VPN access can be serviced.
 
-Simulate a real-world scenario where a user requests secure remote access via VPN. The goal is to configure OpenVPN in a controlled environment while ensuring all prerequisites are validated before proceeding.
+---
 
-Before beginning, several pre-checks were performed to ensure a smooth setup and avoid common issues:
+## Pre-Checks
+Before beginning, several validation steps were performed:
 
 - VM network adapter set to **Bridged** mode and temporary VPN traffic allowed in Windows Firewall.  
-  - Bridged mode means the VM pulls an IP address from the same LAN as the host machine.  
-  - You can confirm it’s bridged by checking the VM’s IP (via `ipconfig`) and seeing it fall in the same subnet as the host.  
-- Verified that the VPN port intended for use is not blocked.  
-- Generated fresh test certificates for secure authentication.  
-- Double-checked user authentication information and exported `.ovpn` configuration file before testing.  
+- Verified UDP port **1194** was open.  
+- Prepared PKI with server and client certificates.  
+- Confirmed `.ovpn` client configuration file was available for later testing.  
+
+**Screenshots:**  
+- ![VM Network Adapter set to Bridged](../images/vm-network-adapter.png)  
+- ![Windows Firewall VPN Rule](../images/firewall-vpn-rule.png)  
+- ![PKI folders with certificates](../images/pki-issued-and-private-folders.png)  
+- ![Server/Client Certificates](../images/openvpn-certificates-and-keys.png)  
+- ![Client Configuration File](../images/openvpn-config-checked.png)  
 
 ---
 
-## Pre-Check Screenshots
+## Investigation / Work
 
-- ![VM Network Adapter set to Bridged](../images/vm-network-adapter.png) – Shows the VM network adapter configured in Bridged mode, confirming the VM is on the same LAN as the host.  
-- ![Windows Firewall temporarily allowing VPN traffic](../images/firewall-vpn-rule.png) – Demonstrates the temporary rule allowing OpenVPN traffic for testing purposes.  
-- ![PKI folders with issued certificates and private keys](../images/pki-issued-and-private-folders.png) – Displays the `pki/issued` and `pki/private` folders containing server and client certificates/keys.  
-- ![Overview of server and client certificates](../images/openvpn-certificates-and-keys.png) – Provides a visual confirmation that certificates and keys have been successfully generated.  
-- ![Client configuration file and certificates](../images/openvpn-config-checked.png) – Shows the `.ovpn` client configuration alongside the required certificates for import into OpenVPN.  
+### 1. Install OpenVPN
+- Downloaded OpenVPN installer from the official website.  
+- Installed into `C:\Program Files\OpenVPN`.  
 
----
+![OpenVPN Download Page](../images/openvpn.download-page.png)  
 
-## Next Steps
+### 2. Configure Certificates with EasyRSA
+- Downloaded EasyRSA (Windows 64-bit).  
+- Generated server and client certificates/keys.  
+- Copied them into `C:\Program Files\OpenVPN\config`.  
 
-With the environment verified and pre-checks completed, the next step is installing OpenVPN on the Windows 11 VM and importing the configuration file for testing.
+![EasyRSA Download Page](../images/esayrsawin64zip.downloadpage.png)  
 
----
+### 3. Validate Configuration Files
+- Placed `server.ovpn` and `client.ovpn` into correct config directories.  
+- Edited both to confirm certificate/key paths were correct.  
 
-# Stage 2: Set Up a VPN Server in Your Lab
+![Server Config](../images/Notepad-open-with-server.ovpn.png)  
+![Client Config](../images/Notepad-open-with-client.ovpn.png)  
 
-This step documents the setup of an OpenVPN server in the lab environment, including certificate configuration, client setup, and verification.
+### 4. Start OpenVPN Server
+- Ran OpenVPN GUI as administrator.  
+- Started the **server** instance successfully.  
 
----
+![Server Connected](../images/server-now-connected-sign.png)  
 
-## 1. Download and Install OpenVPN
+### 5. Verify VPN Assignment
+- Ran `ipconfig` and confirmed VPN adapter received IP `10.8.0.1`.  
 
-Downloaded the OpenVPN installer from the official site:
-
-![OpenVPN Download Page](../images/openvpn.download-page.png)
-
-Installed OpenVPN to the default location (`C:\Program Files\OpenVPN`).
-
----
-
-## 2. Download and Prepare EasyRSA
-
-Downloaded EasyRSA (64-bit Windows version) for certificate management:
-
-![EasyRSA Download Page](../images/esayrsawin64zip.downloadpage.png)
-
-Extracted EasyRSA and prepared it for generating server and client certificates.
+![VPN IP Confirmation](../images/ipconfig-showing-VPNIP-(10.8.0.x).png)  
 
 ---
 
-## 3. OpenVPN Config Folder
-
-Moved the server and client `.ovpn` configuration files into the appropriate directories.
-
-### Global Config Location
-
-![Program Files OpenVPN Config Screenshot](../images/ProgramFiles.OpenVPN.config.-screenshot.png)
-
-### User Config Location
-
-![Users Jordan OpenVPN Config Screenshot](../images/Users.Jordan.OpenVPN.config.png)
+## Resolution
+The VPN server was successfully configured and is now accepting client connections. The server has been assigned the internal VPN IP `10.8.0.1` and will be used to provision access for users.
 
 ---
 
-## 4. Edit Configuration Files
-
-### Client Configuration
-
-Opened `client.ovpn` in Notepad to verify paths and settings:
-
-![Notepad Open With client.ovpn](../images/Notepad-open-with-client.ovpn.png)
-
-### Server Configuration
-
-Opened `server.ovpn` in Notepad to verify paths, keys, and certificates:
-
-![Notepad Open With server.ovpn](../images/Notepad-open-with-server.ovpn.png)
+## Verification
+- OpenVPN GUI shows “Connected.”  
+- IPConfig confirms VPN adapter address (`10.8.0.1`).  
+- Certificates and keys are stored in the correct config folder.  
 
 ---
 
-## 5. Start the OpenVPN Server
-
-Started the OpenVPN GUI as administrator and connected the server instance:
-
-![Server Now Connected Sign](../images/server-now-connected-sign.png)
-
----
-
-## 6. Verify VPN IP
-
-Used `ipconfig` to check the VPN IP assigned to the TAP adapter:
-
-![IPConfig Showing VPN IP (10.8.0.x)](../images/ipconfig-showing-VPNIP-(10.8.0.x).png)
-
-- The server’s VPN IP: `10.8.0.1`
-- Confirms the VPN is active and ready for client connections.
-
----
-
-### Notes
-
-- All certificate files (`server.crt`, `server.key`, `ca.crt`, `dh.pem`) must be present in `C:\Program Files\OpenVPN\config`.
-- Ensure the OpenVPN GUI is run as administrator to allow server connections.
-- Client machines should use the exported `client.ovpn` for testing connectivity.
-
+## Closure Notes
+- Ticket **03 – VPN Setup** is resolved.  
+- Lab now has a functioning VPN server.  
+- Next ticket (`04-vpn-access-request.md`) will simulate a user request for VPN access and test client connectivity.
