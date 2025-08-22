@@ -35,4 +35,60 @@ Please enable VPN access for my account.
 - Purpose: Access to shared drive and CRM system  
 
 Thank you,  
-Sarag Connor  
+Sarah Connor  
+
+---
+
+## Step 2: Gather User Information
+
+Before troubleshooting or enabling VPN access, Tier 1 support must **document essential user details**.  
+This ensures the request is properly logged and can be verified against company policy.
+
+---
+
+### Actions Taken
+
+1. **Created a User Info Form**
+   - Opened Notepad and drafted a simple user information form with the following fields:
+     ```
+     OS:
+     Username:
+     Device Type:
+     Network:
+     Purpose:
+     ```
+
+2. **Saved the Form**
+   - Saved the file as `vpn-user-details.txt` in the repo path:
+     ```
+     windows-ticket-simulations/tools/templates/
+     ```
+
+3. **Captured Blank Form**
+   - Took a screenshot of the blank form template.  
+   📸 **Screenshot:**  
+   ![](../images/vpn-user-details-blank.png)
+
+4. **Filled in User Details**
+   - Used the mock email request (Step 1) to populate the form:  
+     ```
+     OS: Windows 11 Pro
+     Username: sconnor
+     Device Type: Corporate Laptop
+     Network: Home Wi-Fi
+     Purpose: Access to shared drive and CRM system
+     ```
+
+5. **Captured Completed Form**
+   - Took a screenshot of the completed form with John Smith’s details.  
+   📸 **Screenshot:**  
+   ![](../images/vpn-user-details-filled.png)
+
+---
+
+### Outcome
+- User request has been **formally documented** using a repeatable template.  
+- Information will be used in the next step to validate the user against Active Directory and confirm VPN eligibility.
+
+---
+
