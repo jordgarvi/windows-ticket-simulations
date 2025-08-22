@@ -92,3 +92,28 @@ This ensures the request is properly logged and can be verified against company 
 
 ---
 
+## 4. Verify Connectivity
+
+**Objective:** Confirm that the VPN server is functional and that clients can connect (or are assumed connected for lab simulation).
+
+- **Server Connection Confirmed**  
+OpenVPN server (`server.ovpn`) is running successfully on the Windows lab VM. Verified the server log shows no TLS/auth errors.  
+**Screenshot:** ![Server Connected](../images/server-connected.png)
+
+- **Client & sconnor Certificates**  
+Confirmed client certificates were generated correctly and are visible in the templates folder.  
+**Screenshot:** ![Sconnor Certificates in Templates](../images/sconnor-certificates-in-templates.png)
+
+- **VPN Client Configuration**  
+Created VPN client configuration for `sconnor.ovpn` and imported into OpenVPN GUI.  
+**Screenshots:** ![VPN Client Config Created](../images/vpn-client-config-created.png)  
+![VPN Client Import](../images/vpn-client-import.png)
+
+- **Ping Test for VPN Connectivity**  
+Performed ping test to confirm network reachability over the VPN subnet.  
+**Screenshot:** ![VPN Ping Test](../images/vpn-ping-test.png)
+
+**Notes:**  
+- The ping confirms that the VPN tunnel is operational.  
+- TLS/auth mismatch is not configured in this lab, so actual client connections may fail if enforced in a real environment. For lab simulation purposes, client connectivity is assumed.
+
