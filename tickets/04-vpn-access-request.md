@@ -80,6 +80,7 @@ Purpose: Access to shared drive and CRM system
   3. Confirm Windows Firewall allows inbound UDP on port 1194.  
   4. Re-run `netstat -an | find "1194"` after restarting the OpenVPN service to verify if it is now listening.  
 
+---
 
 ## Step 5: Check Client Network Adapters
 - **Action:** Checked Device Manager for TAP-Windows adapters.  
