@@ -63,18 +63,23 @@ Purpose: Access to shared drive and CRM system
 ---
 
 ## Step 4: VPN Server Configuration & Verification
-- **Action:** Configured `server.ovpn` on lab VM with correct CA, server cert/key, DH parameters, and subnet settings.  
-- **Action:** Verified server listening on port 1194 using netstat.  
+
+- **Action:** Configured `server.ovpn` on lab VM with correct CA, server certificate/key, DH parameters, and subnet settings.  
+
+- **Action:** Attempted to verify if the server was listening on port 1194 using `netstat -an | find "1194"`.  
+
+- **Observation:** The command produced **no output**, meaning nothing is currently bound to port 1194.  
+  This suggests the OpenVPN server is either not running correctly, not binding to the expected port, or blocked by firewall/security policies.  
+
 - **Screenshot:**  
 ![](../images/netstat-anfind1194-not-producing-anything.png)
 
-- **Action:** Started OpenVPN server; verified UDP connectivity logs.  
-- **Screenshot:**  
-![](../images/UDPv4linklocal-sequencecomplete.png)
+- **Next Steps:**  
+  1. Re-check that the OpenVPN service is running on the Windows VM.  
+  2. Ensure the server configuration (`server.ovpn`) is located in the correct directory (`C:\Program Files\OpenVPN\config`).  
+  3. Confirm Windows Firewall allows inbound UDP on port 1194.  
+  4. Re-run `netstat -an | find "1194"` after restarting the OpenVPN service to verify if it is now listening.  
 
-- **Outcome:** Server is operational, listening on expected port, and no TLS/auth errors detected.
-
----
 
 ## Step 5: Check Client Network Adapters
 - **Action:** Checked Device Manager for TAP-Windows adapters.  
