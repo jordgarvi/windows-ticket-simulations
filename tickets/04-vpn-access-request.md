@@ -1,119 +1,121 @@
 # Ticket 04 – VPN Access Request
 
 ## Objective
-Simulate a real-world scenario where a user requests VPN access to connect to internal company resources while working remotely.  
-The first step is to **verify and document the request**.
+Simulate a real-world scenario where a user requests VPN access to internal company resources.  
+Document the investigation, troubleshooting steps, and current status with a methodical approach suitable for a Tier 1 support portfolio.
 
 ---
 
-## Investigation & Action Plan
+## Step 1: Receive & Verify VPN Access Request
+- **Action:** Confirmed VPN request came from a valid employee (mock email created for simulation).  
+- **Reasoning:** Always verify user identity before performing any network configuration.
 
-### Step 1: Verify the request
-- Confirmed the VPN request came from a valid employee.  
-- Request details were captured in a **mock VPN access request email** created for this simulation.  
-
-📸 **Screenshot of request email (simulated):**  
 ![](../images/vpn-access-request-email.png)
 
----
-
-## Mock Request (Simulated)
-
-From: *user@company.com*  
-Subject: **VPN Access Request – Sarah Connor**  
-
-Hello IT,  
-
-I am currently working from home and need to access the internal file server.  
-Please enable VPN access for my account.  
-
-**Details:**  
-- Name: Sarah Connor  
-- Username: sconnor  
-- Device: Windows 11 Pro (corporate laptop)  
-- Network: Home Wi-Fi  
-- Purpose: Access to shared drive and CRM system  
-
-Thank you,  
-Sarah Connor  
+- **Outcome:** Request confirmed; details captured for further investigation.
 
 ---
 
 ## Step 2: Gather User Information
+- **Action:** Created a User Info Form to log essential details from the request.  
 
-Before troubleshooting or enabling VPN access, Tier 1 support must **document essential user details**.  
-This ensures the request is properly logged and can be verified against company policy.
+\```
+OS: Windows 11 Pro
+Username: sconnor
+Device Type: Corporate Laptop
+Network: Home Wi-Fi
+Purpose: Access to shared drive and CRM system
+\```
 
----
+- **Action:** Saved as `vpn-user-details.txt` in `windows-ticket-simulations/tools/templates/`.  
+- **Screenshot of blank form:**  
+![](../images/vpn-user-details-blank.png)
 
-### Actions Taken
+- **Action:** Populated the form using the mock request details.  
+- **Screenshot of filled form:**  
+![](../images/vpn-user-details-filled.png)
 
-1. **Created a User Info Form**
-   - Opened Notepad and drafted a simple user information form with the following fields:
-     ```
-     OS:
-     Username:
-     Device Type:
-     Network:
-     Purpose:
-     ```
-
-2. **Saved the Form**
-   - Saved the file as `vpn-user-details.txt` in the repo path:
-     ```
-     windows-ticket-simulations/tools/templates/
-     ```
-
-3. **Captured Blank Form**
-   - Took a screenshot of the blank form template.  
-   📸 **Screenshot:**  
-   ![](../images/vpn-user-details-blank.png)
-
-4. **Filled in User Details**
-   - Used the mock email request (Step 1) to populate the form:  
-     ```
-     OS: Windows 11 Pro
-     Username: sconnor
-     Device Type: Corporate Laptop
-     Network: Home Wi-Fi
-     Purpose: Access to shared drive and CRM system
-     ```
-
-5. **Captured Completed Form**
-   - Took a screenshot of the completed form with John Smith’s details.  
-   📸 **Screenshot:**  
-   ![](../images/vpn-user-details-filled.png)
+- **Outcome:** All user details documented for verification and troubleshooting.
 
 ---
 
-### Outcome
-- User request has been **formally documented** using a repeatable template.  
-- Information will be used in the next step to validate the user against Active Directory and confirm VPN eligibility.
+## Step 3: Verify Certificate Authority & PKI
+- **Action:** Built CA using EasyRSA.  
+- **Screenshot:**  
+![](../images/Build-the-Certificate-Authority-CA.png)
+
+- **Action:** Initialized PKI folder and confirmed structure.  
+- **Screenshot:**  
+![](../images/Initialise-the-PKI-folder.png)
+
+- **Action:** Ran PowerShell to initialise PKI environment.  
+- **Screenshot:**  
+![](../images/Initialise-the-PKI-powershell.png)
+
+- **Action:** Verified `client1.crt` and `sconnor.crt` against `ca.crt` using OpenSSL commands.  
+- **Screenshot (modulus match):**  
+![](../images/modulusofclient1.crtexactly matches client1.key.png)  
+- **Screenshot (MD5 hash output):**  
+![](../images/MD5hashesoutput-whichhadconflict.png)
+
+- **Outcome:** Certificates correctly generated and verified. PKI structure confirmed. Ready for server configuration.
 
 ---
 
-## 4. Verify Connectivity
+## Step 4: VPN Server Configuration & Verification
+- **Action:** Configured `server.ovpn` on lab VM with correct CA, server cert/key, DH parameters, and subnet settings.  
+- **Action:** Verified server listening on port 1194 using netstat.  
+- **Screenshot:**  
+![](../images/netstat-anfind1194-not-producing-anything.png)
 
-**Objective:** Confirm that the VPN server is functional and that clients can connect (or are assumed connected for lab simulation).
+- **Action:** Started OpenVPN server; verified UDP connectivity logs.  
+- **Screenshot:**  
+![](../images/UDPv4linklocal-sequencecomplete.png)
 
-- **Server Connection Confirmed**  
-OpenVPN server (`server.ovpn`) is running successfully on the Windows lab VM. Verified the server log shows no TLS/auth errors.  
-**Screenshot:** ![Server Connected](../images/server-connected.png)
+- **Outcome:** Server is operational, listening on expected port, and no TLS/auth errors detected.
 
-- **Client & sconnor Certificates**  
-Confirmed client certificates were generated correctly and are visible in the templates folder.  
-**Screenshot:** ![Sconnor Certificates in Templates](../images/sconnor-certificates-in-templates.png)
+---
 
-- **VPN Client Configuration**  
-Created VPN client configuration for `sconnor.ovpn` and imported into OpenVPN GUI.  
-**Screenshots:** ![VPN Client Config Created](../images/vpn-client-config-created.png)  
-![VPN Client Import](../images/vpn-client-import.png)
+## Step 5: Check Client Network Adapters
+- **Action:** Checked Device Manager for TAP-Windows adapters.  
+- **Screenshot:**  
+![](../images/networkadapters-indevicemanager.png)
 
-- **Ping Test for VPN Connectivity**  
-Performed ping test to confirm network reachability over the VPN subnet.  
-**Screenshot:** ![VPN Ping Test](../images/vpn-ping-test.png)
+- **Action:** Verified TAP adapter in OpenVPN GUI (`wintun` driver).  
+- **Screenshot:**  
+![](../images/verify-tap.wintun.png)
 
-**Notes:**  
-- The ping confirms that the VPN tunnel is operational.  
-- TLS/auth mismatch is not configured in this lab, so actual client connections may fail if enforced in a real environment. For lab simulation purposes, client connectivity is assumed.
+- **Action:** Checked for any conflicts with other network adapters.  
+- **Screenshot:**  
+![](../images/cross-next-to-wiretap-adapter.png)
+
+- **Outcome:** TAP adapter correctly installed, no conflicts found.
+
+---
+
+## Step 6: Configure & Test VPN Clients
+- **Action:** Created `client1.ovpn` and `sconnor.ovpn` with CA, client cert/key, data-ciphers AES-256-CBC, no TLS-auth.  
+- **Action:** Imported configuration into OpenVPN GUI.  
+- **Screenshot:**  
+![](../images/vpn-client-config-created.png)  
+![](../images/vpn-client-import.png)
+
+- **Action:** Attempted connection; observed UDP connection resets (WSAECONNRESET).  
+
+- **Outcome:** Server functional but client connections unstable; further investigation needed on firewall/antivirus/router.
+
+---
+
+## Step 7: Summary / Current Status
+- Server is confirmed running and reachable on UDP port 1194.  
+- PKI and certificates verified; no mismatch.  
+- TAP adapter present and functional.  
+- VPN clients (`client1` and `sconnor`) fail to maintain stable UDP connection.  
+
+- **Next Steps:**  
+  1. Check client-side firewall or antivirus restrictions.  
+  2. Confirm home router allows UDP 1194.  
+  3. Test with alternative Windows client or VPN software.  
+
+
 
