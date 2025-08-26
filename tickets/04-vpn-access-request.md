@@ -19,13 +19,13 @@ Document the investigation, troubleshooting steps, and current status with a met
 ## Step 2: Gather User Information
 - **Action:** Created a User Info Form to log essential details from the request.  
 
-\```
+```
 OS: Windows 11 Pro
 Username: sconnor
 Device Type: Corporate Laptop
 Network: Home Wi-Fi
 Purpose: Access to shared drive and CRM system
-\```
+```
 
 - **Action:** Saved as `vpn-user-details.txt` in `windows-ticket-simulations/tools/templates/`.  
 - **Screenshot of blank form:**  
@@ -44,7 +44,7 @@ Purpose: Access to shared drive and CRM system
 - **Screenshot:**  
 ![](../images/Build-the-Certificate-Authority-CA.png)
 
-- **Action:** Initialized PKI folder and confirmed structure.  
+- **Action:** Initialised PKI folder and confirmed structure.  
 - **Screenshot:**  
 ![](../images/Initialise-the-PKI-folder.png)
 
@@ -54,7 +54,7 @@ Purpose: Access to shared drive and CRM system
 
 - **Action:** Verified `client1.crt` and `sconnor.crt` against `ca.crt` using OpenSSL commands.  
 - **Screenshot (modulus match):**  
-![](../images/modulusofclient1.crtexactly matches client1.key.png)  
+![](../images/modulusofclient1.crtexactlymatchesclient1.key.png)  
 - **Screenshot (MD5 hash output):**  
 ![](../images/MD5hashesoutput-whichhadconflict.png)
 
@@ -112,10 +112,12 @@ Purpose: Access to shared drive and CRM system
 - TAP adapter present and functional.  
 - VPN clients (`client1` and `sconnor`) fail to maintain stable UDP connection.  
 
-- **Next Steps:**  
-  1. Check client-side firewall or antivirus restrictions.  
-  2. Confirm home router allows UDP 1194.  
-  3. Test with alternative Windows client or VPN software.  
+**Next Steps:**
+
+1. Check client-side firewall or antivirus restrictions.  
+2. Confirm home router allows UDP 1194.  
+3. Test with alternative Windows client or VPN software.  
+
 
 
 
