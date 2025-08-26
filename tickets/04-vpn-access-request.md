@@ -74,12 +74,13 @@ Purpose: Access to shared drive and CRM system
 - **Screenshot:**  
 ![](../images/netstat-anfind1194-not-producing-anything.png)
 
-- **Next Steps:**  
-  1. Re-check that the OpenVPN service is running on the Windows VM.  
-  2. Ensure the server configuration (`server.ovpn`) is located in the correct directory (`C:\Program Files\OpenVPN\config`).  
-  3. Confirm Windows Firewall allows inbound UDP on port 1194.  
-  4. Re-run `netstat -an | find "1194"` after restarting the OpenVPN service to verify if it is now listening.  
+- **Next Steps:**
 
+    1. Re-check that the OpenVPN service is running on the Windows VM.  
+    2. Ensure the server configuration (`server.ovpn`) is located in the correct directory (`C:\Program Files\OpenVPN\config`).  
+    3. Confirm Windows Firewall allows inbound UDP on port 1194.  
+    4. Re-run `netstat -an | find "1194"` after restarting the OpenVPN service to verify if it is now listening.
+ 
 ---
 
 ## Step 5: Check Client Network Adapters
