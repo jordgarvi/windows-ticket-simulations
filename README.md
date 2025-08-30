@@ -19,6 +19,7 @@ The goal: to build practical troubleshooting skills and document realistic suppo
 - `01-user-access-request.md` – Provisioning a new user and assigning shared drive access.
 - `02-outlook-sync-issue.md` – Troubleshooting Outlook connectivity problems.
 - `03-vpn-setup.md` – Installing and configuring a VPN client for remote access.
+- `04-vpn-access-request.md` – Configuring a user requests VPN access to internal company resources.
 
 More tickets coming soon…
 
