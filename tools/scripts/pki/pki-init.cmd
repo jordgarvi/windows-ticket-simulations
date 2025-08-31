@@ -1,8 +1,8 @@
 @echo off
 REM ==============================================
-REM PKI Initialization Script - EasyRSA (Windows)
+REM PKI Initialisation Script - EasyRSA (Windows)
 REM Author: Jordan Bradfield
-REM Purpose: Initializes a new PKI environment
+REM Purpose: Initialises a new PKI environment
 REM ==============================================
 
 REM Change to EasyRSA installation directory
@@ -16,7 +16,7 @@ REM EasyRSA init-pki --force
 
 echo.
 echo ==============================================
-echo PKI Initialization Complete
+echo PKI Initialisation Complete
 echo PKI structure created under C:\Program Files\EasyRSA\pki
 echo ==============================================
 pause
