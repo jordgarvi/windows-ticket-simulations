@@ -1,130 +1,231 @@
-# Ticket 04 – VPN Access Request
+# Ticket 04 – VPN Access Request – TLS Handshake Failure (Escalated)
 
-## Objective
-Simulate a real-world scenario where a user requests VPN access to internal company resources.  
-Document the investigation, troubleshooting steps, and current status with a methodical approach suitable for a Tier 1 support portfolio.
+## Incident Logging
 
----
-
-## Step 1: Receive & Verify VPN Access Request
-- **Action:** Confirmed VPN request came from a valid employee (mock email created for simulation).  
-- **Reasoning:** Always verify user identity before performing any network configuration.
-
-![](../images/vpn-access-request-email.png)
-
-- **Outcome:** Request confirmed; details captured for further investigation.
+- **Ticket ID:** 0004-VPN-AR
+- **Date Reported:** 22-07-2025
+- **Reported by:** User \`s.connor\`
+- **Channel:** Email to IT Support (simulated lab scenario)
 
 ---
 
-## Step 2: Gather User Information
-- **Action:** Created a User Info Form to log essential details from the request.  
+## Issue Summary
 
-```
+User \`s.connor\` requested VPN access to internal lab resources using the OpenVPN platform built in **Ticket 03 – VPN Setup Simulation**.
+
+A VPN profile was created and deployed to the user, but every connection attempt failed with **TLS handshake errors** and \`WSAECONNRESET\` messages. Despite multiple attempts, the tunnel never fully established and remained unstable.
+
+This ticket focuses on:
+
+- Handling a VPN access request
+- Documenting the full troubleshooting process
+- Showing where the investigation reached its limits
+- Ending with a realistic escalation, not a fake “magically fixed” result
+
+---
+
+## Environment
+
+- **Client OS:** Windows 11 Pro
+- **VPN Software:** OpenVPN GUI
+- **Server:** OpenVPN server on Windows (from Ticket 03 lab)
+- **Network:** Home Wi-Fi → NAT router → VPN server
+- **PKI:** EasyRSA-based CA, server certificate, client certificates (\`client1\`, \`sconnor\`)
+
+---
+
+## Step 1 – Receive & Verify Request
+
+Simulated a VPN access request via email from \`s.connor\`.
+
+![vpn-access-request-email](../images/vpn-access-request-email.png)
+
+Captured key request details:
+
+\`\`\`
 OS: Windows 11 Pro
 Username: sconnor
 Device Type: Corporate Laptop
 Network: Home Wi-Fi
 Purpose: Access to shared drive and CRM system
-```
+\`\`\`
 
-- **Action:** Saved as `vpn-user-details.txt` in `windows-ticket-simulations/tools/templates/`.  
-- **Screenshot of blank form:**  
-![](../images/vpn-user-details-blank.png)
+![vpn-user-details-blank](../images/vpn-user-details-blank.png)
+![vpn-user-details-filled](../images/vpn-user-details-filled.png)
 
-- **Action:** Populated the form using the mock request details.  
-- **Screenshot of filled form:**  
-![](../images/vpn-user-details-filled.png)
-
-- **Outcome:** All user details documented for verification and troubleshooting.
+Outcome: Request validated and details documented.
 
 ---
 
-## Step 3: Verify Certificate Authority & PKI
-- **Action:** Built CA using EasyRSA.  
-- **Screenshot:**  
-![](../images/Build-the-Certificate-Authority-CA.png)
+## Step 2 – What Went Wrong (High-Level)
 
-- **Action:** Initialised PKI folder and confirmed structure.  
-- **Screenshot:**  
-![](../images/Initialise-the-PKI-folder.png)
+When attempting to connect using either \`client1\` or \`sconnor\` VPN profiles, the following errors occurred:
 
-- **Action:** Ran PowerShell to initialise PKI environment.  
-- **Screenshot:**  
-![](../images/Initialise-the-PKI-powershell.png)
+- \`TLS Error: TLS key negotiation failed to occur within 60 seconds\`
+- \`read UDPv4: Connection reset by peer (WSAECONNRESET)\`
 
-- **Action:** Verified `client1.crt` and `sconnor.crt` against `ca.crt` using OpenSSL commands.  
-- **Screenshot (modulus match):**  
-![](../images/modulusofclient1.crtexactlymatchesclient1.key.png)  
-- **Screenshot (MD5 hash output):**  
-![](../images/MD5hashesoutput-whichhadconflict.png)
+At the same time:
 
-- **Outcome:** Certificates correctly generated and verified. PKI structure confirmed. Ready for server configuration.
+- OpenVPN GUI appeared to start the server successfully
+- Running the command below showed nothing listening on UDP 1194:
 
----
+\`netstat -an ^| find "1194"\`
 
-## Step 4: VPN Server Configuration & Verification
+Clients could ping the server, but the TLS handshake never succeeded.
 
-- **Action:** Configured `server.ovpn` on lab VM with correct CA, server certificate/key, DH parameters, and subnet settings.  
+This produced a contradiction:
 
-- **Action:** Attempted to verify if the server was listening on port 1194 using `netstat -an | find "1194"`.  
-
-- **Observation:** The command produced **no output**, meaning nothing is currently bound to port 1194.  
-  This suggests the OpenVPN server is either not running correctly, not binding to the expected port, or blocked by firewall/security policies.  
-
-- **Screenshot:**  
-![](../images/netstat-anfind1194-not-producing-anything.png)
-
-- **Next Steps:**
-
-1. Re-check that the OpenVPN service is running on the Windows VM.
-2. Ensure the server configuration (`server.ovpn`) is located in the correct directory (`C:\Program Files\OpenVPN\config`).
-3. Confirm Windows Firewall allows inbound UDP on port 1194.
-4. Re-run `netstat -an | find "1194"` after restarting the OpenVPN service to verify if it is now listening.
+> The GUI said the server was “running” but Windows reported no process listening on UDP 1194.
 
 ---
 
-## Step 5: Check Client Network Adapters
-- **Action:** Checked Device Manager for TAP-Windows adapters.  
-- **Screenshot:**  
-![](../images/networkadapters-indevicemanager.png)
+## Step 3 – PKI & Certificate Verification
 
-- **Action:** Verified TAP adapter in OpenVPN GUI (`wintun` driver).  
-- **Screenshot:**  
-![](../images/verify-tap.wintun.png)
+To eliminate PKI issues, I validated the entire certificate chain.
 
-- **Action:** Checked for any conflicts with other network adapters.  
-- **Screenshot:**  
-![](../images/cross-next-to-wiretap-adapter.png)
+Actions performed:
 
-- **Outcome:** TAP adapter correctly installed, no conflicts found.
+- Built the Certificate Authority (CA)
+- Initialised PKI environment
+- Generated server and client certificates
+- Verified matching modulus and MD5 hashes
 
----
+Screenshots:
+![Build-the-Certificate-Authority-CA](../images/Build-the-Certificate-Authority-CA.png)
+![Initialise-the-PKI-folder](../images/Initialise-the-PKI-folder.png)
+![Initialise-the-PKI-powershell](../images/Initialise-the-PKI-powershell.png)
+![modulus-match](../images/modulusofclient1.crtexactlymatchesclient1.key.png)
+![MD5-hash-test](../images/MD5hashesoutput-whichhadconflict.png)
 
-## Step 6: Configure & Test VPN Clients
-- **Action:** Created `client1.ovpn` and `sconnor.ovpn` with CA, client cert/key, data-ciphers AES-256-CBC, no TLS-auth.  
-- **Action:** Imported configuration into OpenVPN GUI.  
-- **Screenshot:**  
-![](../images/vpn-client-config-created.png)  
-![](../images/vpn-client-import.png)
-
-- **Action:** Attempted connection; observed UDP connection resets (WSAECONNRESET).  
-
-- **Outcome:** Server functional but client connections unstable; further investigation needed on firewall/antivirus/router.
+PKI Conclusion:
+- Certificates match their keys
+- CA signature valid
+- PKI unlikely to be the issue
 
 ---
 
-## Step 7: Summary / Current Status
-- Server is confirmed running and reachable on UDP port 1194.  
-- PKI and certificates verified; no mismatch.  
-- TAP adapter present and functional.  
-- VPN clients (`client1` and `sconnor`) fail to maintain stable UDP connection.  
+## Step 4 – Server Status & Port Check
 
-**Next Steps:**
+Checked whether OpenVPN was actually binding to port 1194:
 
-1. Check client-side firewall or antivirus restrictions.  
-2. Confirm home router allows UDP 1194.  
-3. Test with alternative Windows client or VPN software.  
+Command used:
 
+\`netstat -an ^| find "1194"\`
 
+Screenshot:
+![netstat-no-output](../images/netstat-anfind1194-not-producing-anything.png)
 
+Findings:
 
+- **No process** bound to UDP 1194
+- GUI misleadingly reported “Server started”
+- Strong indication of TAP/Wintun or OS-level failure preventing binding
+
+Additional checks:
+
+![networkadapters](../images/networkadapters-indevicemanager.png)
+![verify-tap](../images/verify-tap.wintun.png)
+![adapter-warning](../images/cross-next-to-wiretap-adapter.png)
+![openvpn-config-folder](../images/ProgramFiles.OpenVPN.config.-screenshot.png)
+
+Conclusion:
+- Server launch blocked at network driver level
+- TAP/Wintun adapter likely malfunctioning
+
+---
+
+## Step 5 – Client Config Validation
+
+Validated the client-side configuration:
+
+- Rebuilt \`.ovpn\` files
+- Synced cipher settings between server and clients
+- Verified certificate paths
+- Confirmed readability of cert/key files
+
+Screenshots:
+![server-config](../images/Notepad-open-with-server.ovpn.png)
+![client-config](../images/Notepad-open-with-client.ovpn.png)
+![user-config-folder](../images/Users.Jordan.OpenVPN.config.png)
+![client-config-created](../images/vpn-client-config-created.png)
+![client-config-import](../images/vpn-client-import.png)
+
+Despite clean configs:
+
+- TLS negotiation still failed
+- UDPv4 sequence messages appeared but handshake never completed
+
+Screenshot:
+![udp-sequence](../images/UDPv4linklocal-sequencecomplete.png)
+
+Conclusion:
+- Client configuration correct
+- Failure remains server-side
+
+---
+
+## Step 6 – Why I Stopped (Escalation)
+
+At this point I completed:
+
+- Identity verification
+- Environment documentation
+- PKI validation
+- Server port checks
+- TAP/Wintun driver inspection
+- Client config rebuild
+- Multi-attempt connection testing
+
+But:
+
+- Server never successfully bound to UDP 1194
+- Handshake failures persisted
+- Driver/OS-level issue likely
+
+In a real MSP or corporate IT environment, this is where a Tier 1/2 engineer:
+
+- Escalates to the Network / Infrastructure team  
+- Escalation includes logs, findings, and hypotheses
+
+So in this simulation, I closed the ticket as:
+
+> **Known Issue – Escalated to Senior Engineer**
+
+---
+
+## Current Status
+
+- **User VPN access:** Still failing  
+- **Failure cause:** TAP/Wintun or OS driver stack preventing OpenVPN from binding  
+- **Ticket outcome:** Escalated to specialist  
+
+---
+
+## Lessons Learned
+
+- Some issues exceed Tier 1/2 scope — this is *normal*
+- Deep documentation is still valuable even when unresolved
+- TLS handshake problems require checking:
+  - PKI
+  - Port bindings
+  - Firewall rules
+  - Network drivers
+  - OS-level logs
+- Knowing when to escalate is professional and expected
+
+---
+
+## Tools Used
+
+- EasyRSA
+- PowerShell (\`netstat\`)
+- Device Manager
+- OpenVPN GUI
+- Notepad (config inspection)
+- Windows Event Viewer
+
+---
+
+> **Note for reviewers:**  
+> This ticket is intentionally unresolved.  
+> It demonstrates structured troubleshooting, systematic validation, and correct escalation for a complex network failure scenario.
