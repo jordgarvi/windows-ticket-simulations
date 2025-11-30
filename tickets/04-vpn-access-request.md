@@ -57,7 +57,7 @@ Outcome: Request validated and details documented.
 
 ---
 
-## Step 2 – What Went Wrong (High-Level)
+## Step 2 – What Went Wrong
 
 When attempting to connect using either \`client1\` or \`sconnor\` VPN profiles, the following errors occurred:
 
