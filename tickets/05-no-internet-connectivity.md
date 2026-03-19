@@ -35,3 +35,19 @@ The issue was reproduced in a controlled lab environment to simulate a real-worl
 
 📸 **System information (Windows 11):**  
 ![](../images/environment-system-info.png)
+
+---
+
+## Issue Recreation
+
+To simulate the issue, the system's network configuration was manually modified.
+
+The IPv4 settings were changed from automatic (DHCP) to a static configuration, and the default gateway was intentionally removed.
+
+This results in the system retaining a valid IP address while being unable to route traffic outside of the local network.
+
+📸 **IPv4 configuration with missing default gateway:**  
+![](../images/no-internet-ipv4-no-gateway.png)
+
+📸 **Network adapter status (enabled):**  
+![](../images/no-internet-adapter-active.png)
