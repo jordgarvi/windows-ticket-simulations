@@ -97,3 +97,11 @@ The request failed, confirming that name resolution was not functioning due to l
 
 📸 **DNS resolution failure:**  
 ![](../images/no-internet-dns-fail.png)
+
+---
+
+## Root Cause
+
+The default gateway was missing from the system's IPv4 configuration.
+
+Without a default gateway, the system cannot route traffic outside of the local network, resulting in complete loss of internet connectivity.
