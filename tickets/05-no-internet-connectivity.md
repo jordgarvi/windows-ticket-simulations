@@ -75,3 +75,14 @@ The request failed, confirming the system could not reach the gateway.
 
 📸 **Ping failure to gateway:**  
 ![](../images/no-internet-ping-gateway-fail.png)
+
+---
+
+### Step 3: Test External Connectivity
+
+A ping test to an external IP address (8.8.8.8) was performed.
+
+The request failed, confirming no internet access beyond the local network.
+
+📸 **Ping failure to external IP:**  
+![](../images/no-internet-ping-external-fail.png)
