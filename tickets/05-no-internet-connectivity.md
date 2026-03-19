@@ -105,3 +105,14 @@ The request failed, confirming that name resolution was not functioning due to l
 The default gateway was missing from the system's IPv4 configuration.
 
 Without a default gateway, the system cannot route traffic outside of the local network, resulting in complete loss of internet connectivity.
+
+---
+
+## Resolution
+
+The issue was resolved by configuring the correct default gateway in the IPv4 settings.
+
+This restored the system's ability to route traffic to external networks.
+
+📸 **Updated IPv4 configuration with correct gateway:**  
+![](../images/no-internet-ipv4-fixed.png)
