@@ -51,3 +51,16 @@ This results in the system retaining a valid IP address while being unable to ro
 
 📸 **Network adapter status (enabled):**  
 ![](../images/no-internet-adapter-active.png)
+
+---
+
+## Investigation & Action Plan
+
+### Step 1: Check IP Configuration
+
+The system's network configuration was reviewed using the `ipconfig` command.
+
+The output showed that the system had a valid IP address but no default gateway configured.
+
+📸 **ipconfig output showing missing gateway:**  
+![](../images/no-internet-ipconfig.png)
