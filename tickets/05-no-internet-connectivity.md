@@ -62,6 +62,8 @@ The system's network configuration was reviewed using the `ipconfig` command.
 
 The output showed that the system had a valid IP address but no default gateway configured.
 
+This indicated that the issue was likely related to network configuration rather than physical connectivity.
+
 📸 **ipconfig output showing missing gateway:**  
 ![](../images/no-internet-ipconfig.png)
 
@@ -104,7 +106,7 @@ The request failed, confirming that name resolution was not functioning due to l
 
 The default gateway was missing from the system's IPv4 configuration.
 
-Without a default gateway, the system cannot route traffic outside of the local network, resulting in complete loss of internet connectivity.
+This prevented the system from routing traffic outside of the local subnet, resulting in a complete loss of internet connectivity despite having a valid IP address.
 
 ---
 
@@ -127,6 +129,8 @@ The user was able to:
 - Access websites
 - Send and receive emails
 - Use Microsoft Teams
+
+No further issues were observed after resolution.
 
 📸 **Successful ping to external IP:**  
 ![](../images/no-internet-ping-success.png)
