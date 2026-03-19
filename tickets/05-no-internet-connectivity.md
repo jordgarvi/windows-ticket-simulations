@@ -86,3 +86,14 @@ The request failed, confirming no internet access beyond the local network.
 
 📸 **Ping failure to external IP:**  
 ![](../images/no-internet-ping-external-fail.png)
+
+---
+
+### Step 4: Test DNS Resolution
+
+A DNS test was performed by attempting to ping a domain name.
+
+The request failed, confirming that name resolution was not functioning due to lack of connectivity.
+
+📸 **DNS resolution failure:**  
+![](../images/no-internet-dns-fail.png)
