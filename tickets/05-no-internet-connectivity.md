@@ -64,3 +64,14 @@ The output showed that the system had a valid IP address but no default gateway 
 
 📸 **ipconfig output showing missing gateway:**  
 ![](../images/no-internet-ipconfig.png)
+
+---
+
+### Step 2: Test Connectivity to Gateway
+
+A ping test was performed to the local gateway to verify network communication.
+
+The request failed, confirming the system could not reach the gateway.
+
+📸 **Ping failure to gateway:**  
+![](../images/no-internet-ping-gateway-fail.png)
