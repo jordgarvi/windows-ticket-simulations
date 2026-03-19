@@ -116,3 +116,20 @@ This restored the system's ability to route traffic to external networks.
 
 📸 **Updated IPv4 configuration with correct gateway:**  
 ![](../images/no-internet-ipv4-fixed.png)
+
+---
+
+## Verification
+
+After applying the fix, connectivity was successfully restored.
+
+The user was able to:
+- Access websites
+- Send and receive emails
+- Use Microsoft Teams
+
+📸 **Successful ping to external IP:**  
+![](../images/no-internet-ping-success.png)
+
+📸 **Browser connectivity restored:**  
+![](../images/no-internet-browser-working.png)
