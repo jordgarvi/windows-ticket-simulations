@@ -45,3 +45,14 @@ This results in the system being able to connect to the network, but unable to r
 ![](../images/dns-adapter-active.png)
 
 ---
+
+### Additional Investigation: DNS Still Resolving Despite Incorrect Configuration
+
+During testing, the system continued to successfully resolve domain names despite being configured with an invalid DNS server.
+
+This behaviour was unexpected and required further investigation.
+
+📸 **Initial DNS configuration with invalid server:**  
+![](../images/second-dns-break.png)
+
+---
