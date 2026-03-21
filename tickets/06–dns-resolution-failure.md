@@ -67,3 +67,15 @@ The DNS cache was cleared to ensure no previously resolved domain entries were b
 ![](../images/flush-dns.png)
 
 ---
+
+### Step 6: Re-test DNS Resolution
+
+After clearing the cache, domain resolution was tested again.
+
+Despite the incorrect DNS configuration, domain names were still resolving successfully.
+
+📸 **DNS still resolving unexpectedly:**  
+![](../images/dns-still-active.png)
+
+---
+
