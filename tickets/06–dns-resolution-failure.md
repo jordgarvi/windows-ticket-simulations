@@ -175,3 +175,24 @@ Additionally, IPv6 was initially enabled, allowing DNS resolution to continue vi
 Once IPv6 was disabled, the DNS failure was correctly reproduced and confirmed.
 
 ---
+
+## Resolution
+
+The issue was resolved by correcting the DNS server configuration in the IPv4 settings.
+
+The DNS server was updated to valid public DNS services.
+
+- Preferred DNS server: 8.8.8.8  
+- Alternate DNS server: 1.1.1.1  
+
+📸 **Updated IPv4 configuration with correct DNS server:**  
+![](../images/dns-ipv4-fixed.png)
+
+---
+
+Additionally, IPv6 was re-enabled to restore normal network functionality and ensure compatibility with modern network environments.
+
+📸 **IPv6 re-enabled on network adapter:**  
+![](../images/ipv6-checked.png)
+
+---
