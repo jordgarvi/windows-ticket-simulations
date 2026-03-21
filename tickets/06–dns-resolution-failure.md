@@ -79,3 +79,20 @@ Despite the incorrect DNS configuration, domain names were still resolving succe
 
 ---
 
+### Step 7: Identify Possible Cause (IPv6 Fallback)
+
+Further investigation identified that IPv6 was still enabled on the network adapter.
+
+This can allow the system to bypass the configured IPv4 DNS server and use IPv6 DNS resolution instead.
+
+---
+
+### Step 8: Disable IPv6
+
+IPv6 was disabled on the network adapter to ensure all DNS queries were forced through the IPv4 configuration.
+
+📸 **IPv6 disabled on network adapter:**  
+![](../images/ipv6-unchecked.png)
+
+---
+
