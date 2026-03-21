@@ -56,3 +56,14 @@ This behaviour was unexpected and required further investigation.
 ![](../images/second-dns-break.png)
 
 ---
+
+### Step 5: Verify DNS Cache
+
+The DNS cache was cleared to ensure no previously resolved domain entries were being used.
+
+    ipconfig /flushdns
+
+📸 **DNS cache successfully flushed:**  
+![](../images/flush-dns.png)
+
+---
