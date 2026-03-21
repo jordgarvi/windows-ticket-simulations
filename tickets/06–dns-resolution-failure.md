@@ -196,3 +196,22 @@ Additionally, IPv6 was re-enabled to restore normal network functionality and en
 ![](../images/ipv6-checked.png)
 
 ---
+
+## Verification
+
+After applying the fix, DNS resolution was successfully restored.
+
+The system was able to:
+- Resolve domain names
+- Access websites
+- Connect to online services such as email and collaboration tools
+
+No further issues were observed after resolution.
+
+📸 **Successful ping to domain name:**  
+![](../images/dns-success.png)
+
+📸 **Browser connectivity restored:**  
+![](../images/dns-browser-working.png)
+
+---
