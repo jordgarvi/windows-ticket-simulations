@@ -96,3 +96,16 @@ IPv6 was disabled on the network adapter to ensure all DNS queries were forced t
 
 ---
 
+### Step 9: Re-test DNS Resolution After Disabling IPv6
+
+After disabling IPv6, DNS resolution was tested again.
+
+The system was now unable to resolve domain names, confirming that the issue was correctly reproduced.
+
+📸 **Ping failure to domain (DNS not resolving):**  
+![](../images/bbc_openai-ping-fail.png)
+
+📸 **nslookup confirming DNS failure:**  
+![](../images/nslookup-bbc-fail.png)
+
+---
