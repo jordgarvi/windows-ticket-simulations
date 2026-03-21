@@ -29,3 +29,19 @@ The issue was reproduced in a controlled lab environment to simulate a real-worl
 ![](../images/environment-system-info.png)
 
 ---
+
+## Issue Recreation
+
+To simulate the issue, the system's DNS configuration was manually modified.
+
+The IPv4 settings were changed from automatic (DHCP) to a static DNS configuration using an invalid DNS server address.
+
+This results in the system being able to connect to the network, but unable to resolve domain names.
+
+📸 **IPv4 configuration with incorrect DNS server:**  
+![](../images/dns-ipv4-settings-broken.png)
+
+📸 **Network adapter status (connected):**  
+![](../images/dns-adapter-active.png)
+
+---
