@@ -46,6 +46,60 @@ This results in the system being able to connect to the network, but unable to r
 
 ---
 
+## Investigation & Action Plan
+
+### Step 1: Check IP Configuration
+
+The system's network configuration was reviewed using the `ipconfig /all` command.
+
+The output showed that the system had a valid IP address and default gateway, confirming that the system was connected to the network.
+
+However, the configured DNS server appeared incorrect.
+
+📸 **ipconfig output showing incorrect DNS server:**  
+![](../images/dns-ipconfig.png)
+
+---
+
+### Step 2: Test Network Connectivity
+
+A ping test was performed to an external IP address (8.8.8.8).
+
+The request was successful, confirming that the system had internet connectivity.
+
+This indicated that the issue was not related to network access, but likely related to name resolution.
+
+📸 **Successful ping to external IP address:**  
+![](../images/dns-ping-ip-success.png)
+
+---
+
+### Step 3: Test DNS Resolution
+
+A ping test was performed using a domain name.
+
+The request failed, indicating that the system was unable to resolve the domain to an IP address.
+
+This suggested a DNS-related issue.
+
+📸 **Ping failure when using domain name:**  
+![](../images/dns-ping-domain-fail.png)
+
+---
+
+### Step 4: Confirm DNS Failure
+
+The `nslookup` command was used to test DNS resolution directly.
+
+The request failed, confirming that the system was unable to communicate with the configured DNS server.
+
+This verified that the issue was specifically related to DNS configuration.
+
+📸 **nslookup failure:**  
+![](../images/dns-nslookup-fail.png)
+
+---
+
 ### Additional Investigation: DNS Still Resolving Despite Incorrect Configuration
 
 During testing, the system continued to successfully resolve domain names despite being configured with an invalid DNS server.
