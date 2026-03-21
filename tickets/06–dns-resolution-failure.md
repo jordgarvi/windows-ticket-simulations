@@ -163,3 +163,15 @@ The system was now unable to resolve domain names, confirming that the issue was
 ![](../images/nslookup-bbc-fail.png)
 
 ---
+
+## Root Cause
+
+The system was configured with an incorrect DNS server address.
+
+Although the system had a valid IP address and internet connectivity, it was unable to resolve domain names due to the invalid DNS configuration.
+
+Additionally, IPv6 was initially enabled, allowing DNS resolution to continue via an alternate protocol, which delayed accurate diagnosis of the issue.
+
+Once IPv6 was disabled, the DNS failure was correctly reproduced and confirmed.
+
+---
