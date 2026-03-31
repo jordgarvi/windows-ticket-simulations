@@ -54,7 +54,7 @@ The system's network configuration was reviewed using the `ipconfig /all` comman
 
 The output showed that the system had a valid IP address and default gateway, confirming that the system was connected to the network.
 
-However, the configured DNS server appeared incorrect.
+However, further inspection was required to validate the DNS configuration.
 
 📸 **ipconfig output showing incorrect DNS server:**  
 ![](../images/dns-ipconfig.png)
