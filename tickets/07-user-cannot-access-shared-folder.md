@@ -104,7 +104,7 @@ This was identified as the direct cause of the "Access Denied" error.
 
 ## Root Cause
 
-The issue was caused by incorrect NTFS permissions on the shared folder.
+The issue was caused by an explicit NTFS deny permission applied to the affected user account on the shared folder.
 
 An explicit deny permission had been applied to the affected user account, preventing access to the folder even though it was visible in File Explorer.
 
@@ -120,6 +120,8 @@ The explicit deny entry applied to the affected user account was removed, and ap
 
 This allowed the user to open the shared folder successfully.
 
+The explicit deny entry was removed from the user permissions, and standard read access was confirmed.
+
 📸 **Updated folder permissions after removing denied access:**  
 ![](../images/shared-folder-permissions-fixed.png)
 
@@ -132,7 +134,7 @@ After correcting the folder permissions, access was successfully restored.
 The affected user was able to:
 - Open the shared folder
 - View its contents
-- Access files without receiving an error
+- Open and read files within the shared folder without receiving an error
 
 No further issues were observed after resolution.
 
@@ -151,4 +153,5 @@ No further issues were observed after resolution.
 - Reproducing the issue as the affected user helps confirm the true access experience
 - Reviewing security settings is essential when diagnosing access-related issues
 - Correcting permissions should always be followed by verification using the affected account
+- Effective troubleshooting requires validating both visibility and access permissions separately
 
