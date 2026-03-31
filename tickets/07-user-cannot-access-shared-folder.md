@@ -51,3 +51,18 @@ This resulted in the user being able to see the folder but not open it.
 
 ---
 
+## Investigation & Action Plan
+
+### Step 1: Reproduce the Reported Issue
+
+The issue was reproduced by signing in as the affected user and attempting to open the shared folder.
+
+The folder was visible, but access was denied when the user attempted to open it.
+
+This confirmed that the issue was related to permissions rather than folder visibility.
+
+📸 **Access denied message when opening shared folder:**  
+![](../images/shared-folder-access-denied.png)
+
+---
+
