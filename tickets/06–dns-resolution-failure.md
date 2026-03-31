@@ -168,13 +168,13 @@ The system was now unable to resolve domain names, confirming that the issue was
 
 ## Root Cause
 
-The system was configured with an incorrect DNS server address.
+The issue was caused by an incorrect DNS server configuration.
 
-Although the system had a valid IP address and internet connectivity, it was unable to resolve domain names due to the invalid DNS configuration.
+Although the system maintained valid network connectivity, it was unable to resolve domain names due to the invalid DNS server.
 
-Additionally, IPv6 was initially enabled, allowing DNS resolution to continue via an alternate protocol, which delayed accurate diagnosis of the issue.
+Additionally, IPv6 remained enabled and allowed DNS resolution to continue via an alternate protocol. This masked the issue and delayed accurate identification of the root cause.
 
-Once IPv6 was disabled, the DNS failure was correctly reproduced and confirmed.
+Once IPv6 was disabled, the DNS failure was correctly isolated and confirmed.
 
 ---
 
