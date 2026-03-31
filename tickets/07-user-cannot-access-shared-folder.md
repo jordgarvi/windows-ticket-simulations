@@ -79,3 +79,16 @@ This indicated that access was being blocked by NTFS permissions.
 
 ---
 
+### Step 3: Validate Affected User Account
+
+The affected user account was reviewed to confirm that the correct account was being tested.
+
+The Local Users and Groups management console was used to verify that the test user existed on the system.
+
+This ensured the issue was not caused by an incorrect or missing user account.
+
+📸 **Local user account confirmed in system:**  
+![](../images/shared-folder-user-membership.png)
+
+---
+
