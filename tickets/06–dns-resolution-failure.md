@@ -217,3 +217,10 @@ No further issues were observed after resolution.
 ![](../images/dns-browser-working.png)
 
 ---
+
+## Key Takeaways
+
+- DNS issues can occur even when network connectivity is functioning correctly
+- Successful IP-based communication does not guarantee DNS resolution
+- IPv6 can provide fallback DNS resolution and mask underlying configuration issues
+- Layered troubleshooting is essential for accurate diagnosis
