@@ -125,3 +125,22 @@ This allowed the user to open the shared folder successfully.
 
 ---
 
+## Verification
+
+After correcting the folder permissions, access was successfully restored.
+
+The affected user was able to:
+- Open the shared folder
+- View its contents
+- Access files without receiving an error
+
+No further issues were observed after resolution.
+
+📸 **Shared folder accessible after permissions fix:**  
+![](../images/shared-folder-access-restored.png)
+
+📸 **File contents visible inside shared folder:**  
+![](../images/shared-folder-file-visible.png)
+
+---
+
