@@ -66,3 +66,16 @@ This confirmed that the issue was related to permissions rather than folder visi
 
 ---
 
+### Step 2: Review Folder Security Permissions
+
+The folder's security settings were reviewed to identify whether the affected user had the appropriate permissions.
+
+The security tab showed that the test user had explicit deny permissions applied to the folder.
+
+This indicated that access was being blocked by NTFS permissions.
+
+📸 **Security settings showing denied permissions:**  
+![](../images/shared-folder-security-tab.png)
+
+---
+
