@@ -29,3 +29,23 @@ The issue was reproduced in a controlled lab environment to simulate a real-worl
 ![](../images/environment-system-info.png)
 
 ---
+
+## Issue Recreation
+
+To simulate the issue, a shared folder was created and a test user account was configured.
+
+📸 **Shared folder created for testing:**  
+![](../images/shared-folder-created.png)
+
+Access to the folder was then restricted by applying explicit deny permissions to the test user.
+
+This resulted in the user being able to see the folder but not open it.
+
+📸 **Test user account created for simulation:**  
+![](../images/shared-folder-user-created.png)
+
+📸 **Folder permissions showing denied access:**  
+![](../images/shared-folder-permissions-denied.png)
+
+---
+
