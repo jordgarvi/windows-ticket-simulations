@@ -112,5 +112,16 @@ Because deny permissions take precedence over allow permissions, the user was un
 
 ---
 
+## Resolution
 
+The issue was resolved by correcting the folder's NTFS permissions.
+
+The explicit deny entry applied to the affected user account was removed, and appropriate access permissions were restored.
+
+This allowed the user to open the shared folder successfully.
+
+📸 **Updated folder permissions after removing denied access:**  
+![](../images/shared-folder-permissions-fixed.png)
+
+---
 
