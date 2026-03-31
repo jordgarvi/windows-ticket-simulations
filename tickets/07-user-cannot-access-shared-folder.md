@@ -144,3 +144,11 @@ No further issues were observed after resolution.
 
 ---
 
+## Key Takeaways
+
+- A folder can be visible to a user but still inaccessible due to NTFS permissions
+- Explicit deny permissions override allow permissions
+- Reproducing the issue as the affected user helps confirm the true access experience
+- Reviewing security settings is essential when diagnosing access-related issues
+- Correcting permissions should always be followed by verification using the affected account
+
