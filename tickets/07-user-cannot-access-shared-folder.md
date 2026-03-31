@@ -32,12 +32,14 @@ The issue was reproduced in a controlled lab environment to simulate a real-worl
 
 ## Issue Recreation
 
-To simulate the issue, a shared folder was created and a test user account was configured.
+To simulate the issue, a shared folder was created in a common directory to represent a shared resource environment.
 
 📸 **Shared folder created for testing:**  
 ![](../images/shared-folder-created.png)
 
-Access to the folder was then restricted by applying explicit deny permissions to the test user.
+A test user account was then configured for access testing.
+
+Access to the folder was restricted by applying explicit deny permissions to the test user.
 
 This resulted in the user being able to see the folder but not open it.
 
