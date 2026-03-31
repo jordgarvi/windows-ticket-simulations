@@ -102,3 +102,15 @@ This was identified as the direct cause of the "Access Denied" error.
 
 ---
 
+## Root Cause
+
+The issue was caused by incorrect NTFS permissions on the shared folder.
+
+An explicit deny permission had been applied to the affected user account, preventing access to the folder even though it was visible in File Explorer.
+
+Because deny permissions take precedence over allow permissions, the user was unable to open the folder until the incorrect entry was removed.
+
+---
+
+
+
