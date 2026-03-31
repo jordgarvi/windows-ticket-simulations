@@ -67,6 +67,8 @@ A ping test was performed to an external IP address (8.8.8.8).
 
 The request was successful, confirming that the system had internet connectivity.
 
+This confirmed that the issue was not related to general network connectivity.
+
 This indicated that the issue was not related to network access, but likely related to name resolution.
 
 📸 **Successful ping to external IP address:**  
