@@ -92,3 +92,13 @@ This ensured the issue was not caused by an incorrect or missing user account.
 
 ---
 
+### Step 4: Identify the Cause of Access Failure
+
+The investigation confirmed that the folder itself was present and visible to the user, and that the affected account was valid.
+
+However, an explicit deny permission had been applied to the user account on the folder.
+
+This was identified as the direct cause of the "Access Denied" error.
+
+---
+
