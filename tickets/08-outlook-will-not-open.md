@@ -118,11 +118,11 @@ Since these options were not available, the focus shifted to application-level t
 
 ## Root Cause
 
-The issue could not be fully isolated using traditional troubleshooting methods due to the limitations of the newer Outlook for Windows application.
+The issue is likely related to an application-level fault within the Outlook client.
 
-Unlike the classic Outlook desktop version, this version does not support Safe Mode or direct add-in management, restricting the ability to isolate startup-related issues.
+However, due to the limitations of the newer Outlook for Windows application, traditional diagnostic methods such as Safe Mode and add-in isolation could not be used to fully isolate the exact cause.
 
-The failure to open Outlook is therefore attributed to a potential application-level issue that cannot be directly diagnosed within the current interface.
+This highlights a key limitation when supporting modern Outlook environments.
 
 ---
 
