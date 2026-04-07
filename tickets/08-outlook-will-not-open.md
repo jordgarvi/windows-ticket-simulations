@@ -1,9 +1,9 @@
 # Ticket 08 – Outlook Won’t Open (Startup Failure)
 
 ## Objective
-Simulate a real-world scenario where Microsoft Outlook fails to open due to a problematic add-in.
+Simulate a real-world scenario where Microsoft Outlook fails to open on a Windows 11 system.
 
-The goal is to investigate the issue using standard troubleshooting steps, identify the root cause, and restore normal functionality.
+The goal is to investigate the issue using standard troubleshooting steps, identify possible causes, and adapt troubleshooting methods based on modern Outlook application limitations.
 
 ---
 
