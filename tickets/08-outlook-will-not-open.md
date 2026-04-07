@@ -71,3 +71,18 @@ Outlook did not launch as expected, confirming the user’s reported issue (simu
 ![](../images/outlook-not-opening.png)
 
 ---
+
+---
+
+### Step 2: Attempt to Launch Outlook in Safe Mode
+
+An attempt was made to launch Outlook in Safe Mode using the Run command:
+
+    outlook.exe /safe
+
+The system returned an error indicating that the application could not be found.
+
+This confirmed that the installed Outlook version is the newer Microsoft Store application, which does not support traditional Safe Mode or executable-based troubleshooting methods.
+
+📸 **Run command error when attempting Safe Mode:**  
+![](../images/outlook-safe-mode-error.png)
