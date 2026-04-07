@@ -21,3 +21,19 @@ A user reported issues accessing email through Microsoft Outlook.
 
 📸 **Screenshot of simulated ticket request:**  
 ![](../images/outlook-ticket.png)
+
+---
+
+## Environment
+
+The issue was reproduced in a controlled lab environment to simulate a real-world workstation setup.
+
+- Operating System: Windows 11
+- Environment Type: Virtual Machine
+- Virtualisation Platform: Oracle VirtualBox
+- Application: Microsoft Outlook (Desktop)
+
+📸 **System information (Windows 11):**  
+![](../images/environment-system-info.png)
+
+---
