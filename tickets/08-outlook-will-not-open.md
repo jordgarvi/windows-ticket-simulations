@@ -59,6 +59,8 @@ As a result, the scenario was adapted to focus on the expected troubleshooting w
 
 ---
 
+---
+
 ## Investigation & Action Plan
 
 ### Step 1: Reproduce the Issue
@@ -72,9 +74,7 @@ Outlook did not launch as expected, confirming the user’s reported issue (simu
 
 ---
 
----
-
-### Step 2: Attempt to Launch Outlook in Safe Mode
+### Step 2: Attempt Standard Troubleshooting (Safe Mode)
 
 An attempt was made to launch Outlook in Safe Mode using the Run command:
 
@@ -82,23 +82,37 @@ An attempt was made to launch Outlook in Safe Mode using the Run command:
 
 The system returned an error indicating that the application could not be found.
 
-This confirmed that the installed Outlook version is the newer Microsoft Store application, which does not support traditional Safe Mode or executable-based troubleshooting methods.
+This suggested that the installed Outlook version does not support traditional executable-based troubleshooting methods.
 
 📸 **Run command error when attempting Safe Mode:**  
 ![](../images/outlook-safe-mode-error.png)
 
 ---
 
----
+### Step 3: Identify Application Type
 
-### Step 3: Identify Platform Limitation
+Further investigation confirmed that the installed Outlook version is the newer Outlook for Windows (Microsoft Store application).
 
-Further investigation confirmed that the installed Outlook version is the newer Outlook for Windows application.
-
-This version uses a modern interface and does not provide access to traditional add-in management or Safe Mode startup options.
+Unlike the classic desktop version, this application does not expose:
+- Add-in management options
+- Safe Mode functionality
+- Advanced configuration settings
 
 📸 **Outlook settings interface (limited options):**  
 ![](../images/outlook-new-interface-settings.png)
+
+---
+
+### Step 4: Adapt Troubleshooting Approach
+
+Due to the limitations of the modern Outlook application, alternative troubleshooting steps were considered.
+
+In a standard enterprise environment using the classic Outlook client, the next steps would include:
+- Launching Outlook in Safe Mode
+- Disabling add-ins
+- Recreating the Outlook profile
+
+Since these options were not available, the focus shifted to application-level troubleshooting.
 
 ---
 
