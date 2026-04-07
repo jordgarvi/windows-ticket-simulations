@@ -1,7 +1,7 @@
 # Ticket 08 – Outlook Won’t Open (Modern Outlook Troubleshooting)
 
 ## Objective
-Simulate a real-world scenario where Microsoft Outlook fails to open on a Windows 11 system.
+Simulate a Enterprise support scenario where Microsoft Outlook fails to open on a Windows 11 system.
 
 The goal is to investigate the issue using standard troubleshooting steps, identify possible causes, and adapt troubleshooting methods based on modern Outlook application limitations.
 
@@ -26,7 +26,7 @@ A user reported issues accessing email through Microsoft Outlook.
 
 ## Environment
 
-The issue was reproduced in a controlled lab environment to simulate a real-world workstation setup.
+The issue was reproduced in a controlled lab environment to simulate a service desk workstation setup.
 
 - Operating System: Windows 11
 - Environment Type: Virtual Machine
@@ -54,10 +54,6 @@ This prevented full recreation of the add-in failure scenario using the standard
 ![](../images/outlook-new-interface-settings.png)
 
 As a result, the scenario was adapted to focus on the expected troubleshooting workflow used when Outlook fails to open.
-
----
-
----
 
 ---
 
@@ -135,4 +131,4 @@ With traditional troubleshooting methods unavailable, standard application-level
 - Reinstall the Outlook application if required
 - Use Outlook Web Access (OWA) as a temporary workaround
 
-These steps align with real-world support practices when working with modern application environments that restrict advanced configuration access.
+These steps align with live support scenarios support practices when working with modern application environments that restrict advanced configuration access.
