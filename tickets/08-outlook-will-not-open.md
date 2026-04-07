@@ -99,3 +99,13 @@ This version uses a modern interface and does not provide access to traditional 
 
 📸 **Outlook settings interface (limited options):**  
 ![](../images/outlook-new-interface-settings.png)
+
+---
+
+## Root Cause
+
+The issue could not be fully isolated using traditional troubleshooting methods due to the limitations of the newer Outlook for Windows application.
+
+Unlike the classic Outlook desktop version, this version does not support Safe Mode or direct add-in management, restricting the ability to isolate startup-related issues.
+
+The failure to open Outlook is therefore attributed to a potential application-level issue that cannot be directly diagnosed within the current interface.
