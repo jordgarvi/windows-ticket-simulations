@@ -54,3 +54,20 @@ This prevented full recreation of the add-in failure scenario using the standard
 ![](../images/outlook-new-interface-settings.png)
 
 As a result, the scenario was adapted to focus on the expected troubleshooting workflow used when Outlook fails to open.
+
+---
+
+---
+
+## Investigation & Action Plan
+
+### Step 1: Reproduce the Issue
+
+The issue was reproduced by attempting to open Microsoft Outlook from the Start menu.
+
+Outlook did not launch as expected, confirming the user’s reported issue (simulated scenario).
+
+📸 **Outlook not opening from Start menu:**  
+![](../images/outlook-not-opening.png)
+
+---
