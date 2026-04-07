@@ -1,4 +1,4 @@
-# Ticket 08 – Outlook Won’t Open (Startup Failure)
+# Ticket 08 – Outlook Won’t Open (Modern Outlook Troubleshooting)
 
 ## Objective
 Simulate a real-world scenario where Microsoft Outlook fails to open on a Windows 11 system.
@@ -128,13 +128,11 @@ This highlights a key limitation when supporting modern Outlook environments.
 
 ## Resolution
 
-Due to the limitations of the installed Outlook version, standard troubleshooting steps were not fully available.
+With traditional troubleshooting methods unavailable, standard application-level remediation steps were recommended:
 
-Recommended resolution steps include:
+- Restart the application
+- Reset the Outlook app via Windows settings
+- Reinstall the Outlook application if required
+- Use Outlook Web Access (OWA) as a temporary workaround
 
-- Restarting the application
-- Resetting the Outlook app
-- Reinstalling the application if required
-- Escalating to application support if the issue persists
-
-These steps align with typical support procedures when application-level issues cannot be isolated directly.
+These steps align with real-world support practices when working with modern application environments that restrict advanced configuration access.
