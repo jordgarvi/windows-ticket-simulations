@@ -86,3 +86,16 @@ This confirmed that the installed Outlook version is the newer Microsoft Store a
 
 📸 **Run command error when attempting Safe Mode:**  
 ![](../images/outlook-safe-mode-error.png)
+
+---
+
+---
+
+### Step 3: Identify Platform Limitation
+
+Further investigation confirmed that the installed Outlook version is the newer Outlook for Windows application.
+
+This version uses a modern interface and does not provide access to traditional add-in management or Safe Mode startup options.
+
+📸 **Outlook settings interface (limited options):**  
+![](../images/outlook-new-interface-settings.png)
