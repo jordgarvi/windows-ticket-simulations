@@ -50,8 +50,6 @@ Finance Department
 
 ---
 
----
-
 ## Environment
 
 The issue was reproduced in a controlled lab environment to simulate a typical workstation setup.
@@ -66,8 +64,6 @@ The issue was reproduced in a controlled lab environment to simulate a typical w
 
 ---
 
----
-
 ## Issue Recreation
 
 To simulate the issue, the Windows Print Spooler service was manually stopped.
@@ -78,8 +74,6 @@ Stopping this service prevents print jobs from being processed, causing the prin
 
 📸 **Print Spooler service stopped (service status: stopped):**  
 ![](../images/print-spooler-stopped.png)
-
----
 
 ---
 
@@ -100,7 +94,7 @@ The print request remained unresponsive and did not complete, confirming the use
 
 The printer was reviewed within Windows settings to confirm it was installed and available.
 
-The printer appeared correctly configured but was not processing print jobs.
+The printer appeared correctly configured but was not processing any print jobs.
 
 📸 **Printer visible in settings:**  
 ![](../images/printer-visible.png)
@@ -147,5 +141,29 @@ The issue was resolved by restarting the Print Spooler service.
 
 Once the service was running, the system was able to process print jobs normally.
 
+This restored communication between applications and the printing service.
+
 📸 **Print Spooler service running:**  
 ![](../images/print-spooler-running.png)
+
+---
+
+## Verification
+
+After restarting the Print Spooler service, printing was tested again.
+
+The system successfully processed the print job, confirming that the issue was resolved.
+
+The user was able to:
+- Print documents successfully  
+- Save output using Microsoft Print to PDF  
+- Resume normal work tasks without further issues  
+
+📸 **Successful print job:**  
+![](../images/print-success.png)
+
+📸 **PDF file successfully generated:**  
+![](../images/pdf-output.png)
+
+No further issues were observed after resolution.
+
