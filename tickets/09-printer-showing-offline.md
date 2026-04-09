@@ -80,3 +80,49 @@ Stopping this service prevents print jobs from being processed, causing the prin
 ![](../images/print-spooler-stopped.png)
 
 ---
+
+---
+
+## Investigation & Action Plan
+
+### Step 1: Reproduce the Issue
+
+The issue was reproduced by attempting to print a document using the Microsoft Print to PDF printer.
+
+The print request remained unresponsive and did not complete, confirming the user’s reported issue.
+
+📸 **Print job not processing (unresponsive):**  
+![](../images/printer-loading.png)
+
+---
+
+### Step 2: Check Printer Status
+
+The printer was reviewed within Windows settings to confirm it was installed and available.
+
+The printer appeared correctly configured but was not processing print jobs.
+
+📸 **Printer visible in settings:**  
+![](../images/printer-visible.png)
+
+---
+
+### Step 3: Review Print Queue
+
+The print queue was checked to determine if print jobs were being received and processed.
+
+The queue showed no active processing, indicating a potential issue preventing print jobs from being handled.
+
+📸 **Print queue showing no processing:**  
+![](../images/print-queue.png)
+
+---
+
+### Step 4: Check Print Spooler Service
+
+The Windows Services console was opened to review the status of the Print Spooler service.
+
+The service was found to be stopped, preventing print jobs from being processed.
+
+📸 **Print Spooler service stopped:**  
+![](../images/print-spooler-stopped.png)
