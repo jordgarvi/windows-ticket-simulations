@@ -141,3 +141,11 @@ This demonstrates how Windows services directly impact user-facing functionality
 
 ---
 
+## Resolution
+
+The issue was resolved by restarting the Print Spooler service.
+
+Once the service was running, the system was able to process print jobs normally.
+
+📸 **Print Spooler service running:**  
+![](../images/print-spooler-running.png)
