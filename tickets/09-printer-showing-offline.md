@@ -126,3 +126,18 @@ The service was found to be stopped, preventing print jobs from being processed.
 
 📸 **Print Spooler service stopped:**  
 ![](../images/print-spooler-stopped.png)
+
+---
+
+## Root Cause
+
+The issue was caused by the Print Spooler service being stopped.
+
+The Print Spooler service is responsible for managing print jobs and handling communication between applications and printing devices.
+
+With the service stopped, print jobs could not be processed, resulting in the printer appearing unresponsive and preventing documents from being printed.
+
+This demonstrates how Windows services directly impact user-facing functionality.
+
+---
+
