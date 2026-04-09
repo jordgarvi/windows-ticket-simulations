@@ -63,3 +63,20 @@ The issue was reproduced in a controlled lab environment to simulate a typical w
 
 📸 **System information (Windows 11):**  
 ![](../images/environment-system-info.png)
+
+---
+
+---
+
+## Issue Recreation
+
+To simulate the issue, the Windows Print Spooler service was manually stopped.
+
+The Print Spooler service is responsible for managing print jobs and handling communication between applications and printing devices.
+
+Stopping this service prevents print jobs from being processed, causing the printer to appear offline or unresponsive.
+
+📸 **Print Spooler service stopped (service status: stopped):**  
+![](../images/print-spooler-stopped.png)
+
+---
