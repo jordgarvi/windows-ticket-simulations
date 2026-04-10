@@ -51,3 +51,17 @@ Marketing Department
 ![](../images/onedrive-ticket.png)
 
 ---
+
+## Environment
+
+The issue was reproduced in a controlled lab environment to simulate a typical workstation setup.
+
+- Operating System: Windows 11  
+- Environment Type: Virtual Machine  
+- Virtualisation Platform: Oracle VirtualBox  
+- Application: Microsoft OneDrive  
+
+📸 **System information (Windows 11):**  
+![](../images/environment-system-info.png)
+
+---
