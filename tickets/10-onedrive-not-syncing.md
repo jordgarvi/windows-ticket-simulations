@@ -133,3 +133,14 @@ This confirmed that the issue was not related to network connectivity and helped
 Based on the investigation, OneDrive syncing had been manually paused.
 
 This prevented files from being uploaded or synchronised with the cloud, resulting in the observed issue.
+
+---
+
+## Root Cause
+
+The issue was caused by OneDrive syncing being manually paused via the system tray.
+
+This prevented files from being uploaded and synchronised with the cloud, resulting in pending files and a lack of updates across devices.
+
+---
+
