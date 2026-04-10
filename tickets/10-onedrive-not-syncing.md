@@ -90,3 +90,46 @@ The OneDrive status was reviewed via the system tray, confirming that syncing wa
 
 📸 **OneDrive showing sync paused status:**  
 ![](../images/onedrive-paused-status.png)
+
+---
+
+## Investigation & Action Plan
+
+### Step 1: Reproduce the Issue
+
+A test file was created within the OneDrive directory to confirm the reported issue.
+
+The file did not sync and remained in a pending state, confirming that OneDrive was not processing changes.
+
+📸 **File not syncing (pending status):**  
+![](../images/onedrive-file-not-syncing.png)
+
+---
+
+### Step 2: Check OneDrive Status
+
+The OneDrive application was reviewed via the system tray to assess its current status.
+
+The application indicated that syncing was paused.
+
+📸 **OneDrive showing sync paused status:**  
+![](../images/onedrive-paused-status.png)
+
+---
+
+### Step 3: Verify Network Connectivity
+
+Network connectivity was tested by accessing web-based services to confirm that the system had an active internet connection.
+
+This confirmed that the issue was not related to network connectivity and helped eliminate external factors.
+
+📸 **Internet connectivity confirmed via browser:**  
+![](../images/internet-working.png)
+
+---
+
+### Step 4: Identify the Cause
+
+Based on the investigation, OneDrive syncing had been manually paused.
+
+This prevented files from being uploaded or synchronised with the cloud, resulting in the observed issue.
