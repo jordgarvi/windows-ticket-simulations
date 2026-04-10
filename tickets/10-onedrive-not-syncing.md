@@ -144,3 +144,40 @@ This prevented files from being uploaded and synchronised with the cloud, result
 
 ---
 
+## Resolution
+
+The issue was resolved by resuming OneDrive syncing via the system tray.
+
+Once syncing was resumed, OneDrive began processing pending files and synchronising them with the cloud, restoring normal functionality.
+
+📸 **OneDrive syncing resumed:**  
+![](../images/onedrive-resume-sync.png)
+
+---
+
+## Verification
+
+After resuming OneDrive syncing, the test file was successfully uploaded and synchronised.
+
+The file received a sync confirmation indicator (green tick), confirming that it had been uploaded to the cloud.
+
+📸 **File successfully synced (green tick):**  
+![](../images/onedrive-green-tick.png)
+
+---
+
+The OneDrive application status was reviewed and confirmed to be up to date.
+
+📸 **OneDrive sync status showing up to date:**  
+![](../images/onedrive-sync-success.png)
+
+---
+
+The user was able to:
+- Access updated files across devices  
+- Confirm files were synchronised  
+- Resume normal work without further issues  
+
+No further issues were observed after resolution.
+
+---
