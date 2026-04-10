@@ -65,3 +65,28 @@ The issue was reproduced in a controlled lab environment to simulate a typical w
 ![](../images/environment-system-info.png)
 
 ---
+
+## Issue Recreation
+
+To simulate the issue, OneDrive syncing was manually paused from the system tray.
+
+This prevented files from syncing to the cloud while still appearing locally available on the system.
+
+📸 **OneDrive sync paused from system tray:**  
+![](../images/onedrive-sync-paused.png)
+
+---
+
+A test file was then created within the OneDrive directory to confirm that syncing was not occurring.
+
+The file remained in a pending state and did not receive a sync confirmation indicator (green tick).
+
+📸 **File not syncing (pending status):**  
+![](../images/onedrive-file-not-syncing.png)
+
+---
+
+The OneDrive status was reviewed via the system tray, confirming that syncing was paused and no files were being processed.
+
+📸 **OneDrive showing sync paused status:**  
+![](../images/onedrive-paused-status.png)
