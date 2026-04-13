@@ -167,3 +167,9 @@ The user was able to:
 
 No further issues were observed after resolution.
 
+---
+
+## Related Knowledge Base Article
+
+See: [Windows Printer Showing Offline – Print Spooler Service](../knowledge-base/windows-printer-offline-print-spooler-service.md)
+
