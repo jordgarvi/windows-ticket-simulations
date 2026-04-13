@@ -229,3 +229,9 @@ So in this simulation, I closed the ticket as:
 > **Note for reviewers:**  
 > This ticket is intentionally unresolved.  
 > It demonstrates structured troubleshooting, systematic validation, and correct escalation for a complex network failure scenario.
+
+---
+
+## Related Knowledge Base Article
+
+See: [OpenVPN TLS Handshake Failure Troubleshooting](../knowledge-base/openvpn-tls-handshake-failure.md)
