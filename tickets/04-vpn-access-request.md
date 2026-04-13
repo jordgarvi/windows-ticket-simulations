@@ -234,4 +234,4 @@ So in this simulation, I closed the ticket as:
 
 ## Related Knowledge Base Article
 
-See: [OpenVPN TLS Handshake Failure Troubleshooting](../knowledge-base/openvpn-tls-handshake-failure.md)
+See: [OpenVPN TLS Handshake Failure Troubleshooting](../knowledge-base/openvpn-tls-handshake-failure-troubleshooting.md)
