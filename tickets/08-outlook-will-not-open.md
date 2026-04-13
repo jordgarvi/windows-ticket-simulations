@@ -132,3 +132,9 @@ With traditional troubleshooting methods unavailable, standard application-level
 - Use Outlook Web Access (OWA) as a temporary workaround
 
 These steps align with live support scenarios support practices when working with modern application environments that restrict advanced configuration access.
+
+---
+
+## Related Knowledge Base Article
+
+See: [Outlook Not Opening – Modern Outlook Troubleshooting](../knowledge-base/outlook-not-opening-modern-troubleshooting.md)
