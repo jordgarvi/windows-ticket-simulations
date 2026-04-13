@@ -155,3 +155,8 @@ No further issues were observed after resolution.
 - Correcting permissions should always be followed by verification using the affected account
 - Effective troubleshooting requires validating both visibility and access permissions separately
 
+---
+
+## Related Knowledge Base Article
+
+See: [Windows Shared Folder Access Denied – NTFS Permissions](../knowledge-base/windows-shared-folder-access-denied-ntfs-permissions.md)
