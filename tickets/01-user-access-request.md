@@ -11,7 +11,7 @@ Simulate a typical service desk request where you're asked to create or modify a
 - **Impact:** Single user requiring access to shared resources for normal work tasks  
 - **Urgency:** Medium  
 
-(See SLA: ../docs/sla-priority-matrix.md)
+(See SLA: [SLA & Priority Matrix](../docs/sla-priority-matrix.md))
 
 ---
 
