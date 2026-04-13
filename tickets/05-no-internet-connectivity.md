@@ -137,3 +137,9 @@ No further issues were observed after resolution.
 
 📸 **Browser connectivity restored:**  
 ![](../images/no-internet-browser-working.png)
+
+---
+
+## Related Knowledge Base Article
+
+See: [Windows No Internet Connectivity – Missing Default Gateway](../knowledge-base/windows-no-internet-missing-default-gateway.md)
