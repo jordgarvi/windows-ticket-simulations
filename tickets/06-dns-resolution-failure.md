@@ -224,3 +224,9 @@ No further issues were observed after resolution.
 - Successful IP-based communication does not guarantee DNS resolution
 - IPv6 can provide fallback DNS resolution and mask underlying configuration issues
 - Layered troubleshooting is essential for accurate diagnosis
+
+---
+
+## Related Knowledge Base Article
+
+See: [Windows DNS Resolution Failure](../knowledge-base/windows-dns-resolution-failure.md)
