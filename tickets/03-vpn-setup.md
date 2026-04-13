@@ -96,3 +96,9 @@ The VPN server was successfully configured and is now accepting client connectio
 - Ticket **03 – VPN Setup** is resolved.  
 - Lab now has a functioning VPN server.  
 - Next ticket (`04-vpn-access-request.md`) will simulate a user request for VPN access and test client connectivity.
+
+---
+
+## Related Knowledge Base Article
+
+See: [OpenVPN Server Setup (Windows)](../knowledge-base/openvpn-server-setup.md)
