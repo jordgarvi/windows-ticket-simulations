@@ -181,3 +181,7 @@ The user was able to:
 No further issues were observed after resolution.
 
 ---
+
+## Related Knowledge Base Article
+
+See: [OneDrive Not Syncing – Paused Sync](../knowledge-base/onedrive-not-syncing-paused-sync.md)
