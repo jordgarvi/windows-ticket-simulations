@@ -87,4 +87,4 @@ A user requires access to internal resources but does not yet have an account or
 
 ## Related Ticket
 
-See: `../tickets/01-user-access-request.md`
+See: [Ticket 01 – User Access Request](../tickets/01-user-access-request.md)
