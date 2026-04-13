@@ -15,6 +15,16 @@ As a result, this ticket has been adapted to focus on:
 
 ---
 
+## Incident Details
+
+- **Priority:** P4 – Low  
+- **Impact:** Single user unable to sync emails via desktop client, with alternative access available via Outlook Web Access  
+- **Urgency:** Low  
+
+(See SLA: [SLA & Priority Matrix](../docs/sla-priority-matrix.md))
+
+---
+
 ## Possible Causes
 
 - **Restricted UI access in current Outlook versions** (recent Microsoft UI changes restricting mailbox sync access)  
