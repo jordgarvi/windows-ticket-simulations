@@ -2,7 +2,7 @@
 
 ## Objective
 
-The original goal was to simulate and troubleshoot a common Outlook synchronization issue preventing emails from sending or receiving correctly. The aim was to reproduce the problem, walk through diagnostic steps, and restore normal mail flow.
+The original goal was to simulate and troubleshoot a common Outlook synchronisation issue preventing emails from sending or receiving correctly. The aim was to reproduce the problem, walk through diagnostic steps, and restore normal mail flow.
 
 Email sync problems can cause critical communication delays impacting business or personal productivity.
 
@@ -193,3 +193,9 @@ This repository includes the following materials to support learning and practic
   An explanation of recent UI and policy changes in Microsoft Outlook and Windows Mail apps, and the implications for support workflows.
 
 ---
+
+---
+
+## Related Knowledge Base Article
+
+See: [Outlook Not Syncing (Modern App Limitations & Workarounds)](../knowledge-base/outlook-sync-issues.md)
