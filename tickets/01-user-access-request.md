@@ -1,7 +1,17 @@
 # Ticket 01 – User Access Request
 
 ## Objective
-Simulate a real-world scenario where you're asked to create or modify a user account. The first step is to **verify the authenticity of the request**.
+Simulate a typical service desk request where you're asked to create or modify a user account. The first step is to **verify the authenticity of the request**.
+
+---
+
+## Incident Details
+
+- **Priority:** P3 – Medium  
+- **Impact:** Single user requiring access to shared resources for normal work tasks  
+- **Urgency:** Medium  
+
+(See SLA: ../docs/sla-priority-matrix.md)
 
 ---
 
