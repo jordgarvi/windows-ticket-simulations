@@ -117,3 +117,9 @@ Overall, simulating the entire user access request from verification through per
 - [folder-permissions-assigned.png](../images/folder-permissions-assigned.png)  
 - [access-success.png](../images/access-success.png)
 
+---
+
+## Related Knowledge Base Article
+
+See: [User Account Creation & Access Assignment](../knowledge-base/user-account-creation.md)
+
