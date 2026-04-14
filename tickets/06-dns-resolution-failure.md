@@ -1,3 +1,11 @@
+## Objective
+
+Simulate a scenario where a user is unable to access internet-based services despite appearing to be connected to the network.
+
+The goal is to use layered troubleshooting techniques to distinguish between general connectivity issues and DNS resolution failures, identify the root cause, and restore full access to network services.
+
+---
+
 ## Ticket Simulation
 
 A user reported issues accessing internet-based services despite appearing to be connected to the network.
@@ -15,6 +23,34 @@ A user reported issues accessing internet-based services despite appearing to be
 ![](../images/dns-ticket.png)
 
 ---
+
+## Incident Logging
+
+- **Ticket ID:** 0006-NET-DNS  
+- **Date Reported:** 22-07-2025  
+- **Reported by:** Sarah Williams  
+- **Department:** Marketing  
+- **Channel:** Service Desk Ticket (simulated)  
+
+---
+
+## SLA & Priority
+
+- **Priority Level:** P1 – Critical  
+- **Impact:** High (user unable to access websites and cloud services)  
+- **Urgency:** High (affects multiple business-critical applications)  
+
+- **Response Time Target:** 15 minutes  
+- **Resolution Time Target:** 4 hours  
+
+(Reference: [SLA & Priority Matrix](../docs/sla-priority-matrix.md))
+
+---
+
+## Initial Assessment
+
+The issue appeared to affect multiple internet-based services despite the system showing an active network connection.  
+This suggested that basic connectivity was functional, but a deeper issue such as DNS resolution failure was likely.
 
 ## Environment
 
