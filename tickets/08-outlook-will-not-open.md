@@ -7,6 +7,37 @@ The goal is to investigate the issue using standard troubleshooting steps, ident
 
 ---
 
+## Incident Logging
+
+- **Ticket ID:** 0008-M365-APP  
+- **Date Reported:** 22-07-2025  
+- **Reported by:** Sarah Williams  
+- **Department:** Marketing  
+- **Channel:** Service Desk Ticket (simulated)  
+
+---
+
+## SLA & Priority
+
+- **Priority Level:** P2 – High  
+- **Impact:** Medium (user unable to access email application)  
+- **Urgency:** High (affects communication and daily workflow)  
+
+- **Response Time Target:** 30 minutes  
+- **Resolution Time Target:** 8 hours  
+
+(Reference: [SLA & Priority Matrix](../docs/sla-priority-matrix.md))
+
+---
+
+## Initial Assessment
+
+The issue appeared to be isolated to a specific application, with Outlook failing to launch while the system remained operational.
+
+This suggested an application-level fault rather than a system-wide or network-related issue.
+
+---
+
 ## Ticket Simulation
 
 A user reported issues accessing email through Microsoft Outlook.
@@ -35,8 +66,6 @@ The issue was reproduced in a controlled lab environment to simulate a service d
 
 📸 **System information (Windows 11):**  
 ![](../images/environment-system-info.png)
-
----
 
 ---
 
@@ -109,6 +138,14 @@ In a standard enterprise environment using the classic Outlook client, the next 
 - Recreating the Outlook profile
 
 Since these options were not available, the focus shifted to application-level troubleshooting.
+
+---
+
+## Escalation Consideration
+
+Due to the limitations of the modern Outlook application, full root cause isolation was not possible using standard troubleshooting tools.
+
+In a production environment, this scenario may require escalation to a senior engineer or vendor support for deeper analysis.
 
 ---
 
