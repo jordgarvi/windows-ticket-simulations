@@ -5,6 +5,16 @@ Simulate a real-world scenario where IT sets up a VPN server to enable secure re
 
 ---
 
+## Task Details
+
+- **Type:** Infrastructure Setup / Service Provisioning  
+- **Scope:** Configure OpenVPN server for secure remote access  
+- **Impact:** Enables future user connectivity and remote access  
+
+(Reference: ../docs/sla-priority-matrix.md – SLA priorities apply to incidents, not setup tasks)
+
+---
+
 ## Pre-Checks
 Before beginning, several validation steps were performed:
 
