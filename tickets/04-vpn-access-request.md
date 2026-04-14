@@ -9,6 +9,16 @@
 
 ---
 
+## Incident Details
+
+- **Priority:** P2 – High  
+- **Impact:** User unable to establish VPN connection, preventing access to internal resources  
+- **Urgency:** High  
+
+(See SLA: [SLA & Priority Matrix](../docs/sla-priority-matrix.md))
+
+---
+
 ## Issue Summary
 
 User `s.connor` requested VPN access to internal lab resources using the OpenVPN platform built in **Ticket 03 – VPN Setup Simulation**.
