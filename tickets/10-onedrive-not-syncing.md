@@ -7,6 +7,37 @@ The goal is to investigate the issue using standard troubleshooting steps, ident
 
 ---
 
+## Incident Logging
+
+- **Ticket ID:** 0010-M365-SYNC  
+- **Date Reported:** 22-07-2025  
+- **Reported by:** Emma Wilson  
+- **Department:** Marketing  
+- **Channel:** Email to IT Support (simulated)  
+
+---
+
+## SLA & Priority
+
+- **Priority Level:** P3 – Medium  
+- **Impact:** Low (single user affected, no system-wide impact)  
+- **Urgency:** Medium (affects workflow but workaround may exist)  
+
+- **Response Time Target:** 1 hour  
+- **Resolution Time Target:** 1 business day  
+
+(Reference: [SLA & Priority Matrix](../docs/sla-priority-matrix.md))
+
+---
+
+## Initial Assessment
+
+The issue appeared to be related to file synchronisation within a cloud application, while the system and network remained functional.
+
+This suggested an application or user-state issue rather than a connectivity or infrastructure fault.
+
+---
+
 ## Ticket Simulation
 
 A user reported issues with files not syncing in Microsoft OneDrive, preventing access across devices.
