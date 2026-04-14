@@ -1,3 +1,42 @@
+## Objective
+
+Simulate a scenario where a user is unable to access a shared folder despite it being visible in File Explorer.
+
+The goal is to investigate access-related issues, identify permission conflicts, and restore appropriate access using standard NTFS permission troubleshooting.
+
+---
+
+## Incident Logging
+
+- **Ticket ID:** 0007-FS-ACC  
+- **Date Reported:** 22-07-2025  
+- **Reported by:** Emma Wilson  
+- **Department:** Finance  
+- **Channel:** Service Desk Ticket (simulated)  
+
+---
+
+## SLA & Priority
+
+- **Priority Level:** P2 – High  
+- **Impact:** Medium (user unable to access required shared resource)  
+- **Urgency:** High (affects ability to complete work tasks)  
+
+- **Response Time Target:** 30 minutes  
+- **Resolution Time Target:** 8 hours  
+
+(Reference: [SLA & Priority Matrix](../docs/sla-priority-matrix.md))
+
+---
+
+## Initial Assessment
+
+The issue appeared to be isolated to a specific shared resource, as the folder was visible but inaccessible.
+
+This suggested that the problem was likely related to permissions rather than network connectivity or system availability.
+
+---
+
 ## Ticket Simulation
 
 A user reported being unable to access a shared folder required for their daily work.
