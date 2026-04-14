@@ -154,6 +154,14 @@ The service was found to be stopped, preventing print jobs from being processed.
 
 ---
 
+## Additional Observation
+
+The printer appeared correctly configured and available, but no jobs were processed.
+
+This indicated that the issue was not related to device configuration, but rather to a backend service responsible for handling print jobs.
+
+---
+
 ## Root Cause
 
 The issue was caused by the Print Spooler service being stopped.
