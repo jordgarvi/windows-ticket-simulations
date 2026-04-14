@@ -7,6 +7,37 @@ The goal is to investigate the issue using standard troubleshooting steps, ident
 
 ---
 
+## Incident Logging
+
+- **Ticket ID:** 0009-PRN-INC  
+- **Date Reported:** 22-07-2025  
+- **Reported by:** David Brown  
+- **Department:** Finance  
+- **Channel:** Email to IT Support (simulated)  
+
+---
+
+## SLA & Priority
+
+- **Priority Level:** P3 – Medium  
+- **Impact:** Low (single user affected, workaround potentially available)  
+- **Urgency:** Medium (affects task completion but not full system outage)  
+
+- **Response Time Target:** 1 hour  
+- **Resolution Time Target:** 1 business day  
+
+(Reference: [SLA & Priority Matrix](../docs/sla-priority-matrix.md))
+
+---
+
+## Initial Assessment
+
+The issue appeared to be isolated to a printing device, with the system and applications otherwise functioning normally.
+
+This suggested a service or device-related issue rather than a broader system or network failure.
+
+---
+
 ## Ticket Simulation
 
 A user reported an issue when attempting to print documents required for daily work tasks.
