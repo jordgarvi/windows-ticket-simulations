@@ -167,6 +167,14 @@ This prevented files from being uploaded or synchronised with the cloud, resulti
 
 ---
 
+## Additional Observation
+
+OneDrive appeared to be running normally, with no visible errors presented to the user.
+
+This highlights how application state issues can present without obvious failure indicators, requiring validation of sync status rather than relying solely on application presence.
+
+---
+
 ## Root Cause
 
 The issue was caused by OneDrive syncing being manually paused via the system tray.
