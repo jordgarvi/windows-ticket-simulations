@@ -7,6 +7,34 @@ The goal is to investigate the issue using standard troubleshooting steps, ident
 
 ---
 
+## Incident Logging
+
+- **Ticket ID:** 0005-NET-INC  
+- **Date Reported:** 22-07-2025  
+- **Reported by:** John Smith  
+- **Department:** Sales  
+- **Channel:** Service Desk Ticket (simulated)  
+
+---
+
+## SLA & Priority
+
+- **Priority Level:** P1 – Critical  
+- **Impact:** High (user unable to access internet or business applications)  
+- **Urgency:** High (affects productivity and communication tools)  
+
+- **Response Time Target:** 15 minutes  
+- **Resolution Time Target:** 4 hours  
+
+(Reference: [SLA & Priority Matrix](../docs/sla-priority-matrix.md))
+
+---
+
+## Initial Assessment
+
+Based on the reported symptoms, the issue appeared to affect all network-dependent services.  
+This indicated a likely connectivity or configuration issue rather than an application-specific fault.
+
 ## Ticket Simulation
 
 A user reported an issue with internet connectivity affecting multiple business applications.
