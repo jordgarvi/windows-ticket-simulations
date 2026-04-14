@@ -11,7 +11,7 @@ Simulate a real-world scenario where IT sets up a VPN server to enable secure re
 - **Scope:** Configure OpenVPN server for secure remote access  
 - **Impact:** Enables future user connectivity and remote access  
 
-(Reference: ../docs/sla-priority-matrix.md – SLA priorities apply to incidents, not setup tasks)
+(Reference: [SLA & Priority Matrix](../docs/sla-priority-matrix.md) – priorities apply to incident-based tickets)
 
 ---
 
