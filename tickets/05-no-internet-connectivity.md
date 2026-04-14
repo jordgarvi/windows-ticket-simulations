@@ -35,6 +35,8 @@ The goal is to investigate the issue using standard troubleshooting steps, ident
 Based on the reported symptoms, the issue appeared to affect all network-dependent services.  
 This indicated a likely connectivity or configuration issue rather than an application-specific fault.
 
+---
+
 ## Ticket Simulation
 
 A user reported an issue with internet connectivity affecting multiple business applications.
