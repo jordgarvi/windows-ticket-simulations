@@ -152,7 +152,7 @@ The application indicated that syncing was paused.
 
 Network connectivity was tested by accessing web-based services to confirm that the system had an active internet connection.
 
-This confirmed that the issue was not related to network connectivity and helped eliminate external factors.
+This confirmed that the issue was not related to network connectivity, eliminating external factors and narrowing the fault to the OneDrive application state.
 
 📸 **Internet connectivity confirmed via browser:**  
 ![](../images/internet-working.png)
@@ -161,9 +161,9 @@ This confirmed that the issue was not related to network connectivity and helped
 
 ### Step 4: Identify the Cause
 
-Based on the investigation, OneDrive syncing had been manually paused.
+Based on the investigation, OneDrive syncing had been manually paused via the system tray.
 
-This prevented files from being uploaded or synchronised with the cloud, resulting in the observed issue.
+This prevented files from being uploaded or synchronised with the cloud, resulting in the observed pending state.
 
 ---
 
@@ -172,6 +172,13 @@ This prevented files from being uploaded or synchronised with the cloud, resulti
 OneDrive appeared to be running normally, with no visible errors presented to the user.
 
 This highlights how application state issues can present without obvious failure indicators, requiring validation of sync status rather than relying solely on application presence.
+
+In operational environments, paused sync can also occur without direct user awareness. Common causes include:
+- Temporary interruption during system restart or update  
+- Account re-authentication prompts not completed  
+- Storage quota warnings or sync conflicts  
+
+These scenarios can present with identical symptoms and should be considered if resuming sync does not immediately resolve the issue.
 
 ---
 
