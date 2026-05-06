@@ -1,31 +1,32 @@
-# Windows IT Support Ticket Simulations
+# Windows Service Desk Lab
 
-This repository demonstrates structured IT support workflows through a collection of simulated service desk tickets in a Windows environment.
+A structured IT support portfolio focused on service desk operations, troubleshooting workflows, and incident resolution across Windows and Microsoft 365 environments.
 
-Each ticket follows a consistent format aligned with real support operations, including incident logging, SLA prioritisation, investigation, resolution, and verification.
+This repository demonstrates how common support issues are investigated, documented, prioritised, resolved, and verified within a structured ticket-based workflow.
 
-The aim is to showcase practical troubleshooting ability alongside clear documentation and service desk best practices.
+The project is designed to reflect modern first-line and second-line support practices, with an emphasis on troubleshooting methodology, user impact, SLA awareness, and clear technical documentation.
 
 ---
 
-## Simulated Service Desk Environment
+## Service Desk Environment
 
-This project is designed to reflect how IT support teams operate in practice:
+This lab is structured to reflect operational IT support workflows, including:
 
 - Ticket-based incident and request handling  
 - SLA-driven prioritisation (P1–P4)  
-- Structured troubleshooting workflows  
-- Knowledge base documentation for repeat issues  
-- Clear resolution notes and verification steps  
-- Escalation awareness and decision-making  
+- Structured troubleshooting and root cause analysis  
+- Resolution verification and documentation  
+- Knowledge base creation for repeat issues  
+- Escalation awareness and support boundaries  
 
 ---
 
 ## Service Desk Practices
 
 - SLA and priority matrix (P1–P4)  
-- Ticket lifecycle and workflow  
-- Escalation handling and documentation standards  
+- Ticket lifecycle and workflow standards  
+- Escalation handling and documentation practices  
+- Structured troubleshooting methodology  
 
 👉 [View SLA & Priority Matrix](docs/sla-priority-matrix.md)  
 👉 [View Service Desk Workflow](docs/service-desk-workflow.md)
@@ -34,44 +35,62 @@ This project is designed to reflect how IT support teams operate in practice:
 
 ## Repository Structure
 
-- **tickets/**  
-  End-to-end incident and request simulations covering common IT support scenarios  
+### tickets/
+Structured service desk incidents and request scenarios covering:
 
-- **knowledge-base/**  
-  Supporting documentation for repeat issues and standard fixes  
+- Microsoft 365 support  
+- Networking and connectivity  
+- User access and permissions  
+- VPN and remote access  
+- Windows troubleshooting  
+- Printing and device issues  
 
-- **docs/**  
-  Service desk processes, including SLA definitions and workflow standards  
+---
 
-- **images/**  
-  Screenshots used to support investigation and resolution steps  
+### knowledge-base/
+Reusable support documentation and standard remediation procedures for common issues.
 
-- **tools/**  
-  Supporting scripts and utilities used within the lab  
+---
+
+### docs/
+Service desk operational standards, workflows, SLA definitions, and troubleshooting processes.
+
+---
+
+### images/
+Supporting screenshots and evidence captured during investigation and resolution.
+
+---
+
+### tools/
+Supporting scripts, commands, and utilities used throughout the lab environment.
 
 ---
 
 ## Featured Ticket Examples
 
 ### DNS Resolution Failure
-Diagnosed a system with working network connectivity but failed domain resolution.  
-Used layered troubleshooting (`ping`, `nslookup`) to isolate DNS failure and identify IPv6 fallback masking the issue.  
+Diagnosed a workstation with functioning network connectivity but failed domain name resolution.
+
+Used layered troubleshooting (`ping`, `nslookup`) to isolate DNS failure and identify IPv6 fallback masking the issue.
 
 👉 [View Ticket](tickets/06-dns-resolution-failure.md)
 
 ---
 
-### No Internet Connectivity (Missing Default Gateway)
-Investigated a workstation with no external connectivity despite a valid IP address.  
-Identified missing default gateway and restored network routing.  
+### No Internet Connectivity – Missing Default Gateway
+Investigated a workstation unable to access external resources despite receiving a valid IP address.
+
+Identified missing default gateway configuration and restored network routing functionality.
 
 👉 [View Ticket](tickets/05-no-internet-connectivity.md)
 
 ---
 
-### Shared Folder Access Denied (NTFS Permissions)
-Resolved access issue where a user could see but not open a shared folder.  
-Identified explicit deny permissions overriding access and restored correct NTFS configuration.  
+### Shared Folder Access Denied – NTFS Permissions
+Resolved an access issue where a user could see but not open a shared folder.
+
+Identified explicit deny permissions overriding access inheritance and restored correct NTFS permissions.
 
 👉 [View Ticket](tickets/07-user-cannot-access-shared-folder.md)
 
@@ -84,27 +103,37 @@ Identified explicit deny permissions overriding access and restored correct NTFS
 - Root cause analysis and verification  
 - User access and permissions troubleshooting  
 - Application and device support  
+- Troubleshooting methodology and escalation awareness  
+
+---
 
 ### Microsoft & Windows Support
 - Windows 10/11 environments  
 - Outlook and OneDrive troubleshooting  
-- System tools and services (Event Viewer, Services, Task Manager)  
+- Windows services and system tools  
+- Event Viewer, Services, Task Manager, Device Manager  
+
+---
 
 ### Networking Fundamentals
 - DNS, DHCP, and IP configuration  
 - Connectivity troubleshooting  
 - Gateway and routing issues  
+- VPN and remote access fundamentals  
+
+---
 
 ### Service Desk Operations
 - SLA prioritisation (P1–P4)  
 - Incident logging and documentation  
-- Knowledge base creation  
-- Escalation awareness  
+- Knowledge base development  
+- Structured ticket workflows  
+- User-focused communication and verification  
 
 ---
 
 ## Purpose
 
-This project demonstrates how I approach IT support tasks from initial user report through to resolution and documentation.
+This project demonstrates how I approach IT support scenarios from initial user report through structured investigation, diagnosis, resolution, and verification.
 
-It reflects both technical capability and an understanding of how service desks operate in structured environments.
+It is intended to reflect practical service desk operations while showcasing troubleshooting ability, documentation standards, and operational support workflows.
