@@ -185,3 +185,67 @@ In operational environments, repeated authentication prompts or MFA failures may
 - Incomplete MFA re-authentication after password reset  
 
 If MFA issues persist after password reset, users may require re-authentication or MFA re-registration to restore access successfully.
+
+---
+
+## Root Cause
+
+The issue was caused by repeated failed authentication attempts, which triggered the configured account lockout policy and prevented the user from accessing the account.
+
+This resulted in password rejection and authentication failures when attempting to access Microsoft 365 services.
+
+Additional authentication issues such as expired credentials, incomplete sign-in sessions, or MFA-related prompts may also contribute to similar behaviour in operational environments.
+
+---
+
+## Resolution
+
+The issue was resolved by resetting the affected user account password using Local Users and Groups account management tools.
+
+Following the password reset process:
+- The account returned to an accessible state  
+- Authentication functionality was restored  
+- Account settings were reviewed to confirm continued access availability  
+
+Additional authentication guidance was provided to reflect standard Microsoft 365 support practices where MFA re-authentication may be required following credential changes.
+
+---
+
+## Verification
+
+After the password reset process was completed, the user was able to successfully authenticate and regain access to the account.
+
+📸 **Successful login after password reset:**  
+![](../images/password-reset-login-success.png)
+
+---
+
+The user was able to:
+- Successfully sign in  
+- Access Microsoft 365 services  
+- Resume normal work activity  
+- Authenticate without additional account lockout behaviour  
+
+No further authentication issues were observed following resolution.
+
+---
+
+## Security Escalation Consideration
+
+During identity verification and password reset requests, unusual behaviour or inconsistent user responses may indicate a potential account compromise rather than a standard authentication issue.
+
+Examples may include:
+- Multiple failed login attempts from unexpected locations  
+- Repeated MFA prompts not initiated by the user  
+- User denying that they initiated password reset attempts  
+- Unexpected account lockouts or suspicious authentication activity  
+
+If indicators of compromise are suspected, the issue should be escalated immediately in accordance with security and incident handling procedures rather than treated as a routine password reset.
+
+This helps prevent unauthorised access and ensures potential security incidents are investigated appropriately.
+
+---
+
+## Related Knowledge Base Article
+
+See: [Password Reset & MFA Lockout](../knowledge-base/password-reset-mfa-lockout.md)
