@@ -82,3 +82,45 @@ Finance Department
 
 📸 **Screenshot of simulated ticket request:**  
 ![](../images/password-reset-ticket.png)
+
+---
+
+## Environment
+
+The issue was reproduced in a controlled lab environment to simulate a typical authentication and account access support scenario.
+
+- Operating System: Windows 11  
+- Environment Type: Virtual Machine  
+- Virtualisation Platform: Oracle VirtualBox  
+- User Management Tool: Local Users and Groups (`lusrmgr.msc`)  
+- Authentication Type: Local user account simulation  
+
+📸 **System information (Windows 11):**  
+![](../images/environment-system-info.png)
+
+---
+
+## Issue Recreation
+
+To simulate the issue, a local user account was created to represent the affected employee within the Finance department.
+
+📸 **Local user account created for testing:**  
+![](../images/password-reset-user-created.png)
+
+---
+
+To reproduce realistic account lockout behaviour, an account lockout policy was configured using Local Security Policy (`secpol.msc`).
+
+The system was configured to temporarily lock user accounts after three failed sign-in attempts.
+
+📸 **Account lockout policy configured:**  
+![](../images/password-reset-lockout-policy.png)
+
+---
+
+Multiple failed sign-in attempts were then performed using incorrect passwords.
+
+After exceeding the configured threshold, the account became locked and inaccessible.
+
+📸 **Account locked after repeated failed authentication attempts:**  
+![](../images/password-reset-account-locked.png)
