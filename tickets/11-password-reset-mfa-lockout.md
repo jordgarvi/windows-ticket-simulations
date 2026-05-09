@@ -124,3 +124,64 @@ After exceeding the configured threshold, the account became locked and inaccess
 
 📸 **Account locked after repeated failed authentication attempts:**  
 ![](../images/password-reset-account-locked.png)
+
+---
+
+## Investigation & Action Plan
+
+### Step 1: Verify User Identity
+
+Before making any account changes, the user's identity and request authenticity were verified in accordance with standard support and security procedures.
+
+This helps prevent unauthorised password resets and reduces the risk of social engineering or account compromise.
+
+---
+
+### Step 2: Review Account Status
+
+The affected user account was reviewed using Local Users and Groups (`lusrmgr.msc`).
+
+The account existed and was found to be inaccessible following repeated failed authentication attempts triggered by the configured account lockout policy.
+
+📸 **User account properties reviewed during investigation:**  
+![](../images/password-reset-account-properties.png)
+
+---
+
+### Step 3: Reset Password
+
+The account password was reset using Local Users and Groups account management tools.
+
+During the password reset process, Windows displayed a security warning indicating that resetting passwords through administrative tools may affect access to certain protected user data.
+
+📸 **Windows security warning displayed during password reset:**  
+![](../images/password-reset-reset-password-warning.png)
+
+---
+
+The password reset process was then completed successfully, returning the account to an accessible state for authentication testing.
+
+📸 **Password successfully updated for affected user account:**  
+![](../images/password-reset-password-changed.png)
+
+---
+
+### Step 4: Review Password Security Settings
+
+Following the password reset process, account password settings were reviewed to confirm the account remained appropriately configured for continued access and security management.
+
+This included reviewing local password policies and authentication-related account settings within Local Users and Groups.
+
+---
+
+### Step 5: MFA & Authentication Review
+
+Additional authentication checks were considered to reflect a typical Microsoft 365 support workflow.
+
+In operational environments, repeated authentication prompts or MFA failures may occur due to:
+- Expired authentication sessions  
+- Device registration issues  
+- Microsoft Authenticator mismatch  
+- Incomplete MFA re-authentication after password reset  
+
+If MFA issues persist after password reset, users may require re-authentication or MFA re-registration to restore access successfully.
