@@ -246,3 +246,95 @@ This included reviewing:
 - Temporary credential setup  
 
 This helps ensure onboarding activities remain secure, consistent, and aligned with standard service desk procedures.
+
+---
+
+## User Communication Log
+
+### 📧 Acknowledgement – Sent to HR upon ticket receipt
+
+**From:** it.support@company.com  
+**To:** hr.department@company.com  
+**Subject:** RE: New Starter Onboarding Request – Sarah Mitchell [Ticket ID: 0012-USER-ONBOARDING]  
+
+Hi HR Team,
+
+Thank you for submitting the onboarding request for Sarah Mitchell.
+
+The request has been received and onboarding preparation activities have now started. I will confirm once account provisioning and workstation preparation have been completed.
+
+Kind regards,  
+IT Support
+
+---
+
+### 📧 Progress Update – Sent during onboarding preparation
+
+**From:** it.support@company.com  
+**To:** hr.department@company.com; david.turner@company.com  
+**Subject:** RE: New Starter Onboarding Request – Sarah Mitchell [Ticket ID: 0012-USER-ONBOARDING]  
+
+Hi,
+
+The onboarding process for Sarah Mitchell is currently in progress.
+
+The user account has been provisioned and departmental access configuration is being completed. Workstation preparation activities are also underway ahead of the user's start date.
+
+I will provide confirmation once onboarding preparation has been finalised.
+
+Kind regards,  
+IT Support
+
+---
+
+### 📧 New Starter Handover – Sent to new starter
+
+**From:** it.support@company.com  
+**To:** sarah.mitchell@company.com  
+**Subject:** Welcome – Account & Workstation Information  
+
+Hi Sarah,
+
+Welcome to the Finance department.
+
+Your user account and workstation environment have now been prepared ahead of your start date.
+
+Your onboarding setup includes:
+- User account provisioning  
+- Finance department resource access  
+- Department shared drive access  
+- Workstation onboarding resources  
+
+Temporary login credentials have been issued separately through approved communication procedures.
+
+Please change your temporary password upon first login.
+
+If you experience any issues accessing your account or departmental resources, please contact IT Support.
+
+Kind regards,  
+IT Support
+
+---
+
+### 📧 Completion Confirmation – Sent to HR and Line Manager
+
+**From:** it.support@company.com  
+**To:** hr.department@company.com; david.turner@company.com  
+**Subject:** RE: New Starter Onboarding Request – Sarah Mitchell [Ticket ID: 0012-USER-ONBOARDING] – Completed  
+
+Hi,
+
+Onboarding preparation for Sarah Mitchell has now been completed successfully.
+
+The following actions were completed:
+- User account created  
+- Temporary credentials configured  
+- Departmental access assigned  
+- Finance shared drive access prepared  
+- Workstation environment prepared  
+- Onboarding guidance provided to the new starter  
+
+The onboarding request has now been completed and the user is prepared for first-day access.
+
+Kind regards,  
+IT Support
