@@ -110,3 +110,75 @@ HR Department
 
 📸 **Screenshot of simulated onboarding request:**  
 ![](../images/onboarding-ticket.png)
+
+## Environment
+
+The onboarding process was completed within a controlled lab environment to simulate a typical first-line user provisioning and workstation preparation workflow.
+
+- Operating System: Windows 11  
+- Environment Type: Virtual Machine  
+- Virtualisation Platform: Oracle VirtualBox  
+- User Management Tool: Local Users and Groups (`lusrmgr.msc`)  
+- File Access Configuration: NTFS permissions and mapped departmental drive simulation  
+
+📸 **System information (Windows 11):**  
+![](../images/environment-system-info.png)
+
+---
+
+## Onboarding Preparation
+
+### Step 1: Create User Account
+
+A local user account was created for the new starter using Local Users and Groups (`lusrmgr.msc`).
+
+A standard username naming convention was used to maintain account consistency and simplify future account administration.
+
+📸 **New starter account created for Finance department user:**  
+![](../images/onboarding-user-created.png)
+
+---
+
+### Step 2: Prepare Department Resources
+
+A Finance department folder was created to simulate shared departmental resources required by the user.
+
+Basic onboarding documentation and departmental resource files were also prepared to support initial user access and onboarding readiness.
+
+📸 **Finance department resources prepared for onboarding:**  
+![](../images/onboarding-finance-folder.png)
+
+---
+
+### Step 3: Configure User Permissions
+
+NTFS permissions were configured to grant the user appropriate access to the Finance department resources.
+
+Permissions were assigned using a least privilege approach to avoid unnecessary administrative access while still allowing standard departmental usage.
+
+📸 **Finance folder permissions configured for new user:**  
+![](../images/onboarding-folder-permissions.png)
+
+---
+
+### Step 4: Configure Department Drive Access
+
+The Finance department resources were mapped as a departmental network drive to simulate shared drive access commonly used within business environments.
+
+📸 **Mapped departmental drive configured for Finance access:**  
+![](../images/onboarding-mapped-drive.png)
+
+---
+
+### Step 5: Prepare Workstation Environment
+
+The workstation environment was prepared with standard onboarding resources and shortcuts to support initial user access and productivity.
+
+This included:
+- Department resource access  
+- Browser availability  
+- First-day onboarding guidance  
+- Desktop resource preparation for the new starter  
+
+📸 **Workstation environment prepared for new starter:**  
+![](../images/onboarding-workstation-setup.png)
