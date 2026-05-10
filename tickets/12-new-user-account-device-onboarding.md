@@ -182,3 +182,67 @@ This included:
 
 📸 **Workstation environment prepared for new starter:**  
 ![](../images/onboarding-workstation-setup.png)
+
+---
+
+## Investigation & Action Plan
+
+### Step 1: Verify Onboarding Request
+
+Before provisioning activities were started, the onboarding request was reviewed to confirm legitimacy and authorisation.
+
+The request was confirmed as originating from the HR department through the approved support process, and onboarding requirements were verified against the information provided by the requesting manager.
+
+This helps reduce the risk of unauthorised account provisioning or incorrect access assignment.
+
+---
+
+### Step 2: Review Department Requirements
+
+The onboarding requirements for the Finance department were reviewed prior to account setup.
+
+This included:
+- Standard departmental resource access  
+- Shared Finance drive access  
+- Workstation preparation requirements  
+- Initial onboarding guidance for the new starter  
+
+Reviewing requirements before provisioning helps ensure onboarding is completed consistently and reduces the likelihood of missing required access during the user's first day.
+
+---
+
+### Step 3: Provision User Account & Access
+
+The user account was provisioned using the approved naming convention and configured with a temporary password for initial access.
+
+Departmental access was then configured using NTFS permissions and mapped drive preparation.
+
+Access was assigned using a least privilege approach to avoid unnecessary permissions while still supporting standard departmental responsibilities.
+
+---
+
+### Step 4: Prepare Workstation Environment
+
+The workstation environment was prepared to support the new starter prior to their first login.
+
+This included:
+- Department resource preparation  
+- Desktop resource setup  
+- Browser availability  
+- Initial onboarding guidance documentation  
+
+Preparing the workstation environment in advance helps reduce onboarding delays and improves first-day user readiness.
+
+---
+
+### Step 5: Review Security & Access Configuration
+
+Following account provisioning, account and access configuration settings were reviewed to confirm the onboarding process had been completed appropriately.
+
+This included reviewing:
+- User account configuration  
+- Department access assignment  
+- Shared resource permissions  
+- Temporary credential setup  
+
+This helps ensure onboarding activities remain secure, consistent, and aligned with standard service desk procedures.
