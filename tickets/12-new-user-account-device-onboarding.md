@@ -111,6 +111,8 @@ HR Department
 📸 **Screenshot of simulated onboarding request:**  
 ![](../images/onboarding-ticket.png)
 
+---
+
 ## Environment
 
 The onboarding process was completed within a controlled lab environment to simulate a typical first-line user provisioning and workstation preparation workflow.
