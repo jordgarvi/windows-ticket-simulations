@@ -338,3 +338,71 @@ The onboarding request has now been completed and the user is prepared for first
 
 Kind regards,  
 IT Support
+
+---
+
+## Root Cause
+
+The onboarding request was identified as a standard new starter provisioning requirement for a Finance department employee.
+
+The request required account creation, departmental access assignment, workstation preparation, and onboarding guidance prior to the user's start date.
+
+No issues or security concerns were identified during onboarding validation or provisioning activities.
+
+---
+
+## Resolution
+
+The onboarding request was completed by preparing the new starter account and workstation environment in accordance with standard first-line onboarding procedures.
+
+The following actions were completed:
+- User account provisioned  
+- Temporary credentials configured  
+- Finance department access assigned  
+- Department shared drive mapped  
+- Workstation environment prepared  
+- Onboarding guidance provided to the user  
+
+Access permissions were configured using a least privilege approach to support standard departmental responsibilities while avoiding unnecessary administrative access.
+
+---
+
+## Verification
+
+Following onboarding preparation, the new starter account was tested successfully and confirmed operational.
+
+📸 **Successful login using newly provisioned account:**  
+![](../images/onboarding-login-success.png)
+
+---
+
+The following was verified successfully:
+- User able to sign in  
+- Desktop environment accessible  
+- Finance department resources available  
+- Mapped departmental drive accessible  
+- Workstation onboarding resources available  
+
+No issues were identified following onboarding verification.
+
+---
+
+## Security Considerations
+
+User onboarding activities should follow controlled provisioning procedures to reduce the risk of unauthorised access or incorrect permission assignment.
+
+Key onboarding security considerations include:
+- Verifying onboarding requests through approved HR channels  
+- Confirming manager approval before provisioning access  
+- Using temporary passwords for first-time login  
+- Assigning permissions using least privilege principles  
+- Avoiding unnecessary administrative access  
+- Ensuring onboarding activities are documented appropriately  
+
+Access assigned during onboarding should also be reviewed and removed appropriately during future offboarding activities as part of the standard user lifecycle process.
+
+---
+
+## Related Knowledge Base Article
+
+See: [New User Account & Device Onboarding](../knowledge-base/new-user-account-device-onboarding.md)
