@@ -88,3 +88,71 @@ Operations Department
 
 📸 **Screenshot of simulated remote support ticket request:**  
 ![](../images/remote-support-ticket.png)
+
+---
+
+## Environment
+
+The issue was reproduced within a controlled Windows support environment to simulate a typical remote support troubleshooting scenario for a remote user.
+
+- Operating System: Windows 11  
+- Environment Type: Virtual Machine  
+- Virtualisation Platform: Oracle VirtualBox  
+- Remote Support Tool: AnyDesk  
+- Application: Microsoft Outlook (Microsoft 365)  
+
+📸 **System information (Windows 11):**  
+![](../images/environment-system-info.png)
+
+---
+
+## Remote Support Session
+
+### Step 1: Initiate Remote Support Session
+
+A remote support session was prepared using AnyDesk to simulate a standard first-line remote troubleshooting workflow.
+
+Before the remote session was initiated:
+- User identity was verified  
+- Remote support consent was obtained  
+- The user was informed that the support technician would temporarily have visibility of and control over the workstation during troubleshooting activities  
+
+The session was initiated only after confirmation and approval were received from the user.
+
+📸 **AnyDesk remote support session prepared for troubleshooting:**  
+![](../images/remote-support-anydesk-session.png)
+
+---
+
+### Step 2: Reproduce the Issue
+
+The issue was reproduced by attempting to launch Microsoft Outlook remotely.
+
+Outlook failed to launch correctly and displayed a startup/repair error message during the remote session, preventing the user from accessing the mailbox through the desktop application.
+
+📸 **Outlook startup/repair error displayed during remote session:**  
+![](../images/remote-support-outlook-error.png)
+
+---
+
+### Step 3: Investigate Application Behaviour
+
+Task Manager was reviewed remotely to investigate whether Outlook processes remained active in the background.
+
+An existing Outlook background process was identified, indicating the application had not closed correctly and was preventing successful relaunch.
+
+Potential causes such as Outlook profile corruption and Microsoft 365 licensing issues were considered during investigation but were not indicated by the observed behaviour.
+
+📸 **Task Manager showing Outlook process remaining active:**  
+![](../images/remote-support-task-manager.png)
+
+---
+
+### Step 4: Restore Outlook Functionality
+
+The existing Outlook background process was ended through Task Manager.
+
+Outlook was then relaunched successfully, restoring normal application behaviour and mailbox access.
+
+📸 **Outlook successfully launched following process termination:**  
+![](../images/remote-support-outlook-success.png)
