@@ -205,3 +205,176 @@ This included:
 - Company equipment return status review  
 
 These activities are typically managed in line with organisational offboarding and data retention procedures.
+
+## Verification
+
+Following offboarding activities, verification checks were completed to confirm account disablement and access revocation had been applied successfully.
+
+---
+
+### Step 1: Verify Account Disablement
+
+Following account disablement, the user account was no longer available as an active sign-in option.
+
+The account status was reviewed in Local Users and Groups and confirmed as disabled, preventing further authentication using the offboarded account.
+
+📸 **Disabled account confirmed within Local Users and Groups:**  
+![](../images/offboarding-login-failed.png)
+
+---
+
+The disabled account was also no longer presented as an available sign-in option on the Windows login screen.
+
+📸 **Disabled user account no longer available for workstation sign-in:**  
+![](../images/offboarding-login-screen.png)
+
+---
+
+### Step 2: Verify Department Access Removal
+
+Previously assigned Finance department resources were tested following access revocation activities.
+
+Access to the Finance shared folder was no longer available, confirming that departmental permissions had been removed successfully.
+
+📸 **Access denied when attempting to open Finance department resources:**  
+![](../images/offboarding-folder-access-denied.png)
+
+---
+
+### Step 3: Confirm Offboarding Completion
+
+The following checks were verified successfully:
+- User account disabled  
+- Authentication no longer possible  
+- Finance department access removed  
+- Shared resource permissions revoked  
+- No residual access identified during review  
+
+These checks help ensure access revocation activities have been completed appropriately following employee departure.
+
+---
+
+## User Communication Log
+
+### 📧 Acknowledgement – Sent to HR upon ticket receipt
+
+**From:** it.support@company.com  
+**To:** hr.department@company.com  
+**Subject:** RE: Offboarding Request – Sarah Mitchell [Ticket ID: 0014-OFFBOARDING-ACCESS]  
+
+Hi HR Team,
+
+Thank you for submitting the offboarding request for Sarah Mitchell.
+
+The request has been received and offboarding activities have now started. I will confirm once account disablement and access revocation activities have been completed.
+
+Kind regards,  
+IT Support
+
+---
+
+### 📧 Progress Update – Sent to Line Manager
+
+**From:** it.support@company.com  
+**To:** david.turner@company.com  
+**Subject:** RE: Offboarding Activities – Sarah Mitchell  
+
+Hi David,
+
+The offboarding process for Sarah Mitchell is currently in progress.
+
+User account disablement and departmental access revocation activities are being completed in line with the employee's final working date.
+
+I will provide confirmation once all offboarding activities have been finalised.
+
+Kind regards,  
+IT Support
+
+---
+
+### 📧 Completion Confirmation – Sent to HR and Line Manager
+
+**From:** it.support@company.com  
+**To:** hr.department@company.com; david.turner@company.com  
+**Subject:** RE: Offboarding Request – Sarah Mitchell [Ticket ID: 0014-OFFBOARDING-ACCESS] – Completed  
+
+Hi,
+
+The offboarding process for Sarah Mitchell has now been completed successfully.
+
+The following actions were completed:
+- User account disabled  
+- Finance department access revoked  
+- Shared resource permissions removed  
+- Authentication access disabled  
+- Offboarding verification checks completed  
+
+No residual access was identified during review.
+
+Kind regards,  
+IT Support
+
+---
+
+### 📧 Internal Security Confirmation
+
+**From:** it.support@company.com  
+**To:** internal.it.records@company.com  
+**Subject:** Offboarding Security Confirmation – Sarah Mitchell  
+
+Internal offboarding verification completed successfully for Sarah Mitchell.
+
+Verification confirmed:
+- User account disabled  
+- Departmental access revoked  
+- Authentication access disabled  
+- No residual access identified during verification review  
+
+Offboarding activities completed in line with standard access revocation procedures.
+
+---
+
+## Root Cause
+
+The request was identified as a standard employee offboarding and access revocation procedure following the employee's departure from the organisation.
+
+The account and previously assigned departmental access required secure disablement and removal to prevent continued access following departure.
+
+No security concerns or unauthorised activity were identified during the offboarding review process.
+
+---
+
+## Resolution
+
+The offboarding request was completed by disabling the user account and revoking previously assigned Finance department access.
+
+The following actions were completed:
+- User account disabled  
+- Finance department permissions removed  
+- Shared resource access revoked  
+- Authentication access disabled  
+- Offboarding verification checks completed  
+
+Operational data handling and equipment return considerations were also reviewed as part of the offboarding workflow.
+
+---
+
+## Security Considerations
+
+Offboarding activities should follow structured access revocation procedures to reduce the risk of unauthorised access following employee departure.
+
+Key offboarding security considerations include:
+- Verifying HR and management approval before disabling accounts  
+- Revoking access promptly following final working day  
+- Removing departmental and shared resource permissions  
+- Disabling accounts rather than deleting immediately  
+- Reviewing residual access during verification activities  
+- Documenting completed offboarding actions appropriately  
+
+These activities help support secure user lifecycle management and controlled access governance within operational environments.
+
+---
+
+## Related Knowledge Base Article
+
+See: [User Offboarding & Access Revocation](../knowledge-base/user-offboarding-access-revocation.md)
