@@ -111,3 +111,97 @@ HR Department
 
 📸 **Screenshot of simulated offboarding request:**  
 ![](../images/offboarding-ticket.png)
+
+---
+
+## Environment
+
+The offboarding activities were completed within a controlled Windows support environment to simulate a typical first-line user access revocation workflow.
+
+- Operating System: Windows 11  
+- Environment Type: Virtual Machine  
+- Virtualisation Platform: Oracle VirtualBox  
+- User Management Tool: Local Users and Groups (`lusrmgr.msc`)  
+- Access Management: NTFS permissions and mapped departmental drive simulation  
+
+📸 **System information (Windows 11):**  
+![](../images/environment-system-info.png)
+
+---
+
+## Offboarding Actions
+
+### Step 1: Review Existing User Access
+
+Before revoking access, the existing user account and previously assigned departmental access were reviewed.
+
+This included:
+- Local user account status  
+- Finance department shared folder access  
+- Previously assigned NTFS permissions  
+- Mapped departmental drive access  
+
+This review helps ensure all assigned access is identified systematically before removal activities begin.
+
+📸 **User account reviewed prior to offboarding activities:**  
+![](../images/offboarding-account-active.png)
+
+---
+
+### Step 2: Disable User Account
+
+The user account was disabled using Local Users and Groups (`lusrmgr.msc`).
+
+The account was disabled rather than deleted to:
+- Preserve audit history  
+- Support potential data retention review  
+- Allow recovery if required  
+- Prevent accidental permanent deletion  
+
+This reflects standard operational offboarding practice where accounts are normally disabled before any long-term retention or deletion decisions are made.
+
+📸 **User account disabled following offboarding approval:**  
+![](../images/offboarding-account-disabled.png)
+
+---
+
+### Step 3: Remove Department Access
+
+Previously assigned Finance department permissions were reviewed and removed as part of the offboarding process.
+
+This included:
+- Shared folder access removal  
+- NTFS permission revocation  
+- Removal of mapped departmental resource access  
+
+Access revocation activities were completed using least privilege principles to ensure no unnecessary access remained active following the employee's departure.
+
+📸 **Finance department permissions removed during offboarding:**  
+![](../images/offboarding-access-removed.png)
+
+---
+
+### Step 4: Review Offboarding Timing & Security Considerations
+
+Operational timing considerations were reviewed as part of the offboarding workflow.
+
+Key considerations included:
+- Access should normally be revoked at the end of the employee's final working day  
+- Active accounts should not remain enabled after departure  
+- Immediate access revocation may be required in involuntary departure scenarios  
+
+These considerations help reduce the risk of unauthorised access following employee departure and support secure offboarding procedures.
+
+---
+
+### Step 5: Review Data Handling & Asset Status
+
+As part of the offboarding workflow, operational data handling and asset management considerations were reviewed.
+
+This included:
+- Mailbox retention or forwarding considerations  
+- Shared departmental file ownership review  
+- OneDrive or personal work data retention awareness  
+- Company equipment return status review  
+
+These activities are typically managed in line with organisational offboarding and data retention procedures.
